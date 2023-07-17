@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GANNI</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/ganni.js"></script> 
+    <link rel="stylesheet" href="css/import.css">
+
+</head>
+<body>
+    <div id="searchPanel">
+        <div>
+            <h2>SEARCH</h2>
+            <input type="button" value="close"  class="btnClose">
+        </div> 
+        <div>
+            <div>
+                <input type="submit" value="returnSearchResult">
+                <input type="search"  placeholder="Search">
+            </div>
+            <div>
+                <h3>
+                    POPULAR SEARCHES
+                </h3>
+                <ul>
+                    <li>
+                        <a href="list01_newin.html">NEW ARRIVALS</a>
+                    </li>
+                    <li>
+                        <a href="list04_dresses.html">DRESSES</a>
+                    </li>
+                    <li>
+                        <a href="list03_clothing.html">KNITWEAR</a>
+                    </li>
+                    <li>
+                        <a href="list02_shoes.html">BOOTS</a>
+                    </li>
+                    <li>
+                        <a href="list05_outerwear.html">OUTERWEAR</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="signInPanel">
+        <div>
+            <h2>MY ACCOUNT</h2>
+            <input type="button" class="btnClose" value="close">
+        </div>
+        <div>
+            <h3>
+                LOG IN
+                <input type="button" value="Forgot your password?" data-popup="forgotPassword">
+            </h3>
+            <form action="index_after.html">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+                <input type="submit" value="LOG IN" class="outlineBtn">
+            </form>
+        </div>
+        <div id="forgotPassword">
+            <form>
+                <p>Please enter your account email address to receive an email to
+                    reset your password.
+                </p>
+                <input type="email" placeholder="Email">
+                <input type="button" value="SEND" class="outlineBtn" data-innerPop="resetPassword">
+            </form>
+            <div id="resetPassword">
+                <strong>NEW PASSWORD SENT!</strong>
+                <p>
+                    We have sent you an email with the information needed to reset your password. The email might take a couple of minutes to reach your inbox.
+                </p>
+                <p>
+                    Please check your junk mail to ensure you receive it.
+                </p>
+            </div>
+        </div>
+        <div>
+            <h3>NEW CLIENT?</h3>
+            <a href="sign_up.html" class="outlineBtn">SIGN UP</a>
+        </div>
+    </div>
+    <div id="bagPanel">
+        <div>
+            <h2>YOUR CART</h2>
+            <input type="button" class="btnClose" value="close">
+        </div>
+        <div>
+            <p>Your cart is empty</p>
+            <a href="index.html" class="outlineBtn">CONTINUE SHOPPING</a>
+        </div>
+    </div>
+    <div id="bagHavePanel">
+        <div>
+            <h2>YOUR CART</h2>
+            <input type="button" class="btnClose" value="close">
+        </div>
+        <form action="checkout_01_cart.html">
+            <ul>
+                <li>
+                    <figure>
+                        <a href="detail_newIn_07.html">
+                            <img src="./images/newIn_07_Hover.jpg" alt="Stretch Suiting Shirt Blazer frontshot">
+                        </a>
+                    </figure>
+                    <div>
+                        <a href="detail_newIn_07.html">STRETCH SUITING SHIRT BLAZER</a>
+                        <span>Color: Lily Green</span>
+                        <span>Size: 34</span>
+                        <div class="quantComponent">
+                            <input type="button" class="btnMinus" value="-">
+                            <span>1</span>
+                            <input type="button" class="btnPlus" value="+">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Remove">
+                        <span>₩580,000</span>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <div>
+                    <b>SUBTOTAL</b>
+                    <strong>₩580,000</strong>
+                </div>
+                <div>
+                    <span>Shipping</span>
+                    <span>Offered</span>
+                </div>
+                <input type="submit" value="CHECK OUT" class="outlineBtn">
+                <p>Delivery within 3-5 working days &#47; Free returns within 14 days</p>
+            </div>
+        </form>
+    </div>
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    GANNI
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <b>NEW IN</b>
+                        <ol>
+                            <li>
+                                <a href="list01_newin.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list01_newin_01_dresses.html">Dresses</a>  
+                                <a href="list01_newin_02_knitwear.html">Knitwear</a>
+                                <a href="list01_newin_03_tops.html">Tops</a>
+                                <a href="list01_newin_04_outerwear.html">Outerwear</a>
+                                <a href="list01_newin_05_skirts.html">Skirts</a>
+                            </li>
+                            <li>
+                                <a href="list01_newin_06_denim.html">Denim</a> 
+                                <a href="list01_newin_07_t-shirts.html">T-shirts</a> 
+                                <a href="list01_newin_08_bags.html">Bags</a> 
+                                <a href="list01_newin_09_accessories.html">Accessories</a> 
+                                <a href="list01_newin_10_shoes.html">Shoes</a> 
+                            </li>
+                            <li>
+                                <a href="list01_newin_11_ganniworld.html">GANNI World</a>
+                                <a href="list01_newin_12_girlsedit.html">#GANNIGIRLS Edit</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>SHOES</b>
+                        <ol>
+                            <li>
+                                <a href="list02_shoes.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list02_shoes_01_boots.html">Boots</a>
+                                <a href="list02_shoes_02_westernboots.html">Western Boots</a>
+                                <a href="list02_shoes_03_flatshoes.html">Flat Shoes</a>
+                                <a href="list02_shoes_04_loafers.html">Loafers</a>
+                                <a href="list02_shoes_05_mules.html">Mules</a>
+                            </li>
+                            <li>
+                                <a href="list02_shoes_06_heels.html">Heels</a>
+                                <a href="list02_shoes_07_sandals.html">Sandals</a>
+                            </li>
+                            <li>
+                                <a href="list02_shoes_08_jumparound.html">Jump Around</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>CLOTHING</b>
+                        <ol>
+                            <li>
+                                <a href="list03_clothing.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_01_dresses.html">Dresses</a>
+                                <a href="list03_clothing_02_tops.html">Tops</a>
+                                <a href="list03_clothing_03_knitwear.html">Knitwear</a>
+                                <a href="list03_clothing_04_knittedvests.html">Knitted Vests</a>
+                                <a href="list03_clothing_05_outerwear.html">Outerwear</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_06_vests.html">Vests</a>
+                                <a href="list03_clothing_07_denim.html">Denim</a>
+                                <a href="list03_clothing_08_pants.html">Pants</a>
+                                <a href="list03_clothing_09_skirts.html">Skirts</a>
+                                <a href="list03_clothing_10_shorts.html">Shorts</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_11_lingerie.html">Lingerie</a>
+                                <a href="list03_clothing_12_Materials.html">Responsible Materials</a>
+                                <a href="list03_clothing_13_leopard.html">Leopard Print</a>
+                                <a href="list03_clothing_14_trendidng.html">Trending Now</a>
+                                <a href="list03_clothing_15_loungewear.html">Loungewear</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_16_party.html">Party Shop</a>
+                                <a href="list03_clothing_17_favourites.html">GANNI Favourites</a>
+                                <a href="list03_clothing_18_exclusive.html">GANNI Exclusives</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>DRESSES</b>
+                        <ol>
+                            <li>
+                                <a href="list04_dresses.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list04_dresses_01_mini.html">Mini</a>
+                                <a href="list04_dresses_02_midi.html">Midi</a>
+                                <a href="list04_dresses_03_maxi.html">Maxi</a>
+                                <a href="list04_dresses_04_flolar.html">Floral</a>
+                                <a href="list04_dresses_05_animal.html">Animal Print</a>
+                            </li> 
+                            <li>
+                                <a href="list04_dresses_06_printed.html">Printed</a>
+                                <a href="list04_dresses_07_occasion.html">Occasion</a>
+                                <a href="list04_dresses_08_vacation.html">Vacation</a>
+                                <a href="list04_dresses_09_everyday.html">Everyday</a>
+                                <a href="list04_dresses_10_wrap.html">Wrap</a>
+                            </li>
+                            <li>
+                                <a href="list04_dresses_11_bodycon.html">Bodycon</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>OUTERWEAR</b>
+                        <ol>
+                            <li>
+                                <a href="list05_outerwear.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list05_outerwear_01_jackets.html">Jackets</a>
+                            </li>
+                            <li>
+                                <a href="list05_outerwear_02_coat.html">Coats </a>
+                            </li>
+                            <li>
+                                <a href="list05_outerwear_03_blazer.html">Blazers</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>ACCESSORIES</b>
+                        <ol>
+                            <li>
+                                <a href="list06_accessories.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list06_accessories_01_hats.html">Hats</a>
+                                <a href="list06_accessories_02_scarves.html">Scarves</a>
+                                <a href="list06_accessories_03_COLLARS.html">Collars</a>
+                                <a href="list06_accessories_04_Hairaccessories.html">Hair Accessories</a>
+                            </li>
+                            <li>
+                                <a href="list06_accessories_05_wallets.html">Wallets</a>
+                                <a href="list06_accessories_06_keyrings.html">Keyrings</a>
+                                <a href="list06_accessories_07_socks.html">Socks</a>
+                                <a href="list06_accessories_08_tech.html">Tech</a>
+                            </li>
+                            <li>
+                                <a href="list06_accessories_09_boysmells.html">Boy Smells x GANNI</a>
+                                <a href="list06_accessories_10_glitter.html">Submission Beauty Glitter</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>GANNI WORLD</b>
+                        <ol>
+                            <li>
+                                <a href="footer_about01_ganniworld.html">GANNI Girls Around the World</a>
+                            </li>
+                            <li>
+                                <a href="footer_about02_cphfw23.html">CPHFW FW23</a> 
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <input type="button" value="searchPanel" data-panel="searchPanel">
+                <input type="button" value="signInPanel" data-panel="signInPanel">
+                <input type="button" value="bagHavePanel" data-panel="bagHavePanel">
+                <input type="button" value="menuPanel" class="menuBtn">
+            </div>
+        </div>
+    </header>
+    <div class="assistanceContainer">
+        <div class="assistancewrap">
+            <div class="mainContents">
+                <h2>ASSISTANCE &amp; LEGAL</h2>
+                <p>If you have any question, please feel free to contact us.</p>
+                <div>
+                    <h3>PRIVACY POLICY</h3>
+                    <div class="fixContents">
+                        <p>
+                            At ganni we are very attentive to the need for appropriate protection and responsible processing of all personal information that we receive,
+                            and we give data security and confidentiality high priority. This privacy policy sets out clear guidelines for how ganni processes your personal
+                            information and we update our policy on an ongoing basis, in accordance with internal processes and applicable legislation.</p>
+                        <p>
+                            Ganni assures full confidentiality in respect of your personal data. We are responsible for personal data that is submitted via www.ganni.com
+                            (the ”website”), and yourpersonal data will only be available to third parties that need the data to accomplish the intended processing
+                            purpose of the transfer.
+                        </p>
+                        <p>
+                            You may at any time contact our customer service to obtain a copy of your personal data. In addition, you can always ask us to rectify
+                            incorrect information, delete or raise an objection to or limiting the processing of your personal data. If you have any questions about our
+                            processing of your personal data, you are also welcome to
+                            <a href="footer_contact_us.html">contact us.</a>
+                        </p>
+                        <p>
+                            The following is an account of how we use the personal information you leave and/or submit when you visit our website and when you use
+                            the various services on our website.
+                        </p>
+                    </div>
+                    <ul>
+                        <li>
+                            <h4>Data controller and contact information</h4>
+                            <div>
+                                <p>The Website is created and owned by:</p>
+                                <address>
+                                    GANNI A/S <br>
+                                    Bremerholm 4<br>
+                                    1069 Copenhagen K<br>
+                                    Denmark
+                                </address>
+                                <p>Danish Business Registration no. (CVR): 21664731</p>
+                                <a href="footer_contact_us.html">Contact Us</a>
+                                <span>Email: legal@ganni.dk</span>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Collection of information</h4>
+                            <div>
+                                <p>
+                                    GANNI collects information about you when you actively submit information on www.GANNI.com, subscribe to the newsletter, place an order,
+                                    participate in competitions, and/or participate in other activities on the Website. The personal information that you provide and that we
+                                    collect can include, for example, your name, your email address, your private address, your phone number, and similar identification data,
+                                    information about online purchases, and other purchase-related information such as any information that you provide when you are in
+                                    contact with our customer service. Further, we collect information relating to your navigation on the Website, which includes information
+                                    on your IP address, internet browser, cookie identifiers, and information on which sub-pages you visit and the amount of time that you spend on the Website.
+                                </p>
+                                <p>You have to consider your e-Gift Card as cash, and we are not able to replace it in case you lose it, or if it's stolen, destroyed, or used without your permission. Do not share your specific GANNI e-Gift Card number with anyone, as we are not able to control whether it is you or someone else who redeems the GANNI e-Gift Card on our Website.</p>
+                                <p>We collect your personal information in one (1) or more of the following cases:</p>
+                                <ul>
+                                    <li>• When you make an online purchase on the Website</li>
+                                    <li>• When you subscribe to GANNI's newsletter</li>
+                                    <li>• When you create a customer account on the Website</li>
+                                    <li>• When you take part in one of GANNI's competitions</li>
+                                </ul>
+                                <p>
+                                    When submitting information, you will always be informed whether the input is voluntary or a requirement for the implementation of the desired action, such as completing a transaction on the Website. Even if you use your e-mail address in more than one of the above cases, your details will be only collected and registered in a single location. This allows us to reuse your information when you make a purchase with us, while at the same time ensuring that you do not receive the same marketing material from GANNI more than once.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Subscribing to our newsletter</h4>
+                            <div>
+                                <p>When you opt-in to receive GANNI World updates and provide your email and/or phone number, you are giving GANNI your consent to collect and process your personal information, for the purposes of providing updates about our products, services, and events. When sending you GANNI updates we will use the most applicable channel(s) available e.g. email, phone, or messaging services but we will only contact you on the channel(s) included in your consent. Only GANNI will receive and be able to access your personal information.</p>
+                                <p>You can opt out of receiving updates (which would signify withdrawing your consent if you have provided consent), at any time (see "Unsubscribe from GANNI updates" below).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Unsubscribe from ganni updates</h4>
+                            <div>
+                                <p>If you are registered to receive GANNI updates relating to our products, services and events, and you no longer wish to receive these, you can request that we amend your preferences. You can do that either as indicated in the particular communication, e.g. by using the unsubscribe link which is included on all email updates, or by contacting our customer service (customerservice@ganni.com). GANNI will stop sending updates in respect of which you opt out (or withdraw your consent, where applicable) within a reasonable period (as required by applicable law) and in any event within 28 days of receiving your request, in order to allow sufficient time for the change to be administered.</p>
+                                <p>If you opt out of receiving GANNI updates relating to our products, services, and events, we may still send you non-marketing communicati Vons such as emails or applicable phone communications about your account or purchases you have made, and/or emails or applicable phone communications to request and respond to feedback relating to GANNI. We will only use your contact information where permitted to do so in accordance with applicable laws.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Legal basis for collecting, processing and storage of your data</h4>
+                            <div>
+                                <p>GANNI cannot collect, process, store, or use, etc. your personal data without a legal basis in the EU General Data Protection Regulation (“GDPR”). The legal basis can be your consent if the processing is necessary in order to fulfill our contractual relationship, a legal obligation, or based on our legitimate interest as a company.</p>
+                                <p>We process personal data only to fulfill our contractual obligations or to preserve our overriding legitimate interests. Our legitimate interests are the implementation of our business purpose.</p>
+                                <p>Insofar as we obtain consent from the data subject for processing operations of personal data, GDPR Article 6 (1) (a) serves as the legal basis for the processing of personal data.</p>
+                                <p>Insofar as the processing of personal data is required to fulfill a legal requirement that our company is subject to, GDPR Article 6 (1) (c) serves as the legal basis.</p>
+                                <p>In the case that the vital interests of the data subject or another natural person make the processing of personal data necessary, GDPR Article 6 (1) (d) serves as the legal basis.</p>
+                                <p>If processing is required to protect a legitimate interest of our company or of a third party and the interests do not override the interests, fundamental rights, and freedoms of the data subject of the first-named interest, GDPR Article 6 (1) (f) serves as the legal basis for the processing.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Cookies</h4>
+                            <div>
+                                <p>We use cookies on our Website to perform analytics on the use of the Website and to simplify and improve your customer experience. Further on, we use functional cookies in the order placement process and for advertising. The functiZonal cookies are designed to ensure that our online shop work as intended which includes the ability to add products to the shopping cart and complete a purchase.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>How to lodge a complaint</h4>
+                            <div>
+                                <p>If you wish to lodge a complaint about the processing of your personal information, please contact us by telephone or e-mail, as presented above. You can also contact the Danish Data Protection Agency at Datatilsynet, Carl Jacobsens Vej, 35, 2500 Valby, Denmark.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <aside class="subMenu">
+                <ul>
+                    <li>
+                        <a href="footer_assistance01_help.html">HELP?</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance02_delivery.html">DELIVERY</a>
+                    </li>
+                    <li class="active">
+                        <a href="footer_assistance03_privacyPolicy.html">PRIVACY POLICY</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance04_faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance05_returns.html">RETURNS</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance06_cookiePolicy.html">COOKIES</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance07_e-giftcard.html">E-GIFT CARD</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance08_TermsConditions.html">TERMS & CONDITIONS</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="underMenuBar">
+            <ol>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    ASSISTANCE & LEGAL
+                </li>
+                <li>
+                    PRIVACY POLICY
+                </li>
+            </ol>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div class="newsletter">
+                <h3>
+                    NEWSLETTER
+                    <input type="button" value="question mark" data-popup="questionComment">
+                </h3>
+                <input type="email" placeholder="Enter your email address" title="Enter your email address">
+                <input type="button" value="send" data-popup="emailSend">
+                <p id="questionComment">
+                    Sign up below and receive GANNI World updates, including collection launches, early access to
+                    products and collaborations and event invitations Enter your email address.
+                </p>
+            </div>
+            <div class="customer">
+                <h3>CUSTOMER SERVICE</h3>
+                <span>Monday to Friday - 5PM - Midnight KST (10AM - 5PM CET)</span>
+                <ul>
+                    <li>
+                        <a href="tel:+4533324457">
+                            +45 33 32 44 57
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:CUSTOMERSERVICE@GANNI.COM">
+                            CUSTOMERSERVICE@GANNI.COM
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="assistance">
+                <h3>ASSISTANCE &amp; LEGAL</h3>
+                <ul>
+                    <li>
+                        <a href="footer_assistance01_help.html">Help</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance02_delivery.html">Delivery</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance03_privacyPolicy.html">Privacy policy</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance04_faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance05_returns.html">Returns</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance06_cookiePolicy.html">Cookie policy</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance07_e-giftcard.html">E-gift card</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance08_TermsConditions.html">Terms & conditions</a>
+                    </li>
+                    <li>
+                        <a href="my_account_04_tracking.html">Track Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="aboutGanni">
+                <h3>ABOUT GANNI</h3>
+                <ul>
+                    <li>
+                        <a href="footer_about01_ganniworld.html">GANNI Girls Around the World</a>
+                    </li>
+                    <li>
+                        <a href="footer_about02_cphfw23.html">CPHFW FW23</a>
+                    </li>
+                    <li>
+                        <a href="footer_about03_press.html">Press</a>
+                    </li>
+                    <li>
+                        <a href="footer_about04_careers.html">Careers</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sns">
+                <h3>FOLLOW US</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/ganni/">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/ganniofficial">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@ganni_official?lang=en">Tik Tok</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/c/GANNI">Youtube</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ganniStore">
+                <div class="storeLocator">
+                    <h3>STORE LOCATOR</h3>
+                    <a href="footer_storelocator.html">Find a store nearby</a>
+                </div>
+                <div class="selectCountry">
+                    <div class="deliveryCountry">
+                        <h3>DELIVERY COUNTRY/REGION</h3>
+                        <select id="countryname">
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="CA">Canada</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CZ">Czen Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="EE">Estonia</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                            <option value="GR">Greece</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IT">Italy</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NO">Norway</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="RO">Romsnia</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="ES">Spain</option>
+                            <option value="KR" selected="selected">South korea</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="US">United States</option>
+                        </select>
+                    </div>
+                    <div class="language">
+                        <h3>LANGUAGE</h3>
+                        <select name="language" id="select_language">
+                            <option value="en" selected="selected">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div>
+            ©GANNI 2023
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,809 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GANNI</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/ganni.js"></script> 
+    <link rel="stylesheet" href="css/import.css">
+
+</head>
+<body>
+    <div id="searchPanel">
+        <div>
+            <h2>SEARCH</h2>
+            <input type="button" value="close"  class="btnClose">
+        </div> 
+        <div>
+            <div>
+                <input type="submit" value="returnSearchResult">
+                <input type="search"  placeholder="Search">
+            </div>
+            <div>
+                <h3>
+                    POPULAR SEARCHES
+                </h3>
+                <ul>
+                    <li>
+                        <a href="list01_newin.html">NEW ARRIVALS</a>
+                    </li>
+                    <li>
+                        <a href="list04_dresses.html">DRESSES</a>
+                    </li>
+                    <li>
+                        <a href="list03_clothing.html">KNITWEAR</a>
+                    </li>
+                    <li>
+                        <a href="list02_shoes.html">BOOTS</a>
+                    </li>
+                    <li>
+                        <a href="list05_outerwear.html">OUTERWEAR</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="signInPanel">
+        <div>
+            <h2>MY ACCOUNT</h2>
+            <input type="button" class="btnClose" value="close">
+        </div>
+        <div>
+            <h3>
+                LOG IN
+                <input type="button" value="Forgot your password?" data-popup="forgotPassword">
+            </h3>
+            <form action="index_after.html">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+                <input type="submit" value="LOG IN" class="outlineBtn">
+            </form>
+        </div>
+        <div id="forgotPassword">
+            <form>
+                <p>Please enter your account email address to receive an email to
+                    reset your password.
+                </p>
+                <input type="email" placeholder="Email">
+                <input type="button" value="SEND" class="outlineBtn" data-innerPop="resetPassword">
+            </form>
+            <div id="resetPassword">
+                <strong>NEW PASSWORD SENT!</strong>
+                <p>
+                    We have sent you an email with the information needed to reset your password. The email might take a couple of minutes to reach your inbox.
+                </p>
+                <p>
+                    Please check your junk mail to ensure you receive it.
+                </p>
+            </div>
+        </div>
+        <div>
+            <h3>NEW CLIENT?</h3>
+            <a href="sign_up.html" class="outlineBtn">SIGN UP</a>
+        </div>
+    </div>
+    <div id="bagPanel">
+        <div>
+            <h2>YOUR CART</h2>
+            <input type="button" class="btnClose" value="close">
+        </div>
+        <div>
+            <p>Your cart is empty</p>
+            <a href="index.html" class="outlineBtn">CONTINUE SHOPPING</a>
+        </div>
+    </div>
+    <div id="bagHavePanel">
+        <div>
+            <h2>YOUR CART</h2>
+            <input type="button" class="btnClose" value="close">
+        </div>
+        <form action="checkout_01_cart.html">
+            <ul>
+                <li>
+                    <figure>
+                        <a href="detail_newIn_07.html">
+                            <img src="./images/newIn_07_Hover.jpg" alt="Stretch Suiting Shirt Blazer frontshot">
+                        </a>
+                    </figure>
+                    <div>
+                        <a href="detail_newIn_07.html">STRETCH SUITING SHIRT BLAZER</a>
+                        <span>Color: Lily Green</span>
+                        <span>Size: 34</span>
+                        <div class="quantComponent">
+                            <input type="button" class="btnMinus" value="-">
+                            <span>1</span>
+                            <input type="button" class="btnPlus" value="+">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Remove">
+                        <span>₩580,000</span>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <div>
+                    <b>SUBTOTAL</b>
+                    <strong>₩580,000</strong>
+                </div>
+                <div>
+                    <span>Shipping</span>
+                    <span>Offered</span>
+                </div>
+                <input type="submit" value="CHECK OUT" class="outlineBtn">
+                <p>Delivery within 3-5 working days &#47; Free returns within 14 days</p>
+            </div>
+        </form>
+    </div>
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    GANNI
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <b>NEW IN</b>
+                        <ol>
+                            <li>
+                                <a href="list01_newin.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list01_newin_01_dresses.html">Dresses</a>  
+                                <a href="list01_newin_02_knitwear.html">Knitwear</a>
+                                <a href="list01_newin_03_tops.html">Tops</a>
+                                <a href="list01_newin_04_outerwear.html">Outerwear</a>
+                                <a href="list01_newin_05_skirts.html">Skirts</a>
+                            </li>
+                            <li>
+                                <a href="list01_newin_06_denim.html">Denim</a> 
+                                <a href="list01_newin_07_t-shirts.html">T-shirts</a> 
+                                <a href="list01_newin_08_bags.html">Bags</a> 
+                                <a href="list01_newin_09_accessories.html">Accessories</a> 
+                                <a href="list01_newin_10_shoes.html">Shoes</a> 
+                            </li>
+                            <li>
+                                <a href="list01_newin_11_ganniworld.html">GANNI World</a>
+                                <a href="list01_newin_12_girlsedit.html">#GANNIGIRLS Edit</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>SHOES</b>
+                        <ol>
+                            <li>
+                                <a href="list02_shoes.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list02_shoes_01_boots.html">Boots</a>
+                                <a href="list02_shoes_02_westernboots.html">Western Boots</a>
+                                <a href="list02_shoes_03_flatshoes.html">Flat Shoes</a>
+                                <a href="list02_shoes_04_loafers.html">Loafers</a>
+                                <a href="list02_shoes_05_mules.html">Mules</a>
+                            </li>
+                            <li>
+                                <a href="list02_shoes_06_heels.html">Heels</a>
+                                <a href="list02_shoes_07_sandals.html">Sandals</a>
+                            </li>
+                            <li>
+                                <a href="list02_shoes_08_jumparound.html">Jump Around</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>CLOTHING</b>
+                        <ol>
+                            <li>
+                                <a href="list03_clothing.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_01_dresses.html">Dresses</a>
+                                <a href="list03_clothing_02_tops.html">Tops</a>
+                                <a href="list03_clothing_03_knitwear.html">Knitwear</a>
+                                <a href="list03_clothing_04_knittedvests.html">Knitted Vests</a>
+                                <a href="list03_clothing_05_outerwear.html">Outerwear</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_06_vests.html">Vests</a>
+                                <a href="list03_clothing_07_denim.html">Denim</a>
+                                <a href="list03_clothing_08_pants.html">Pants</a>
+                                <a href="list03_clothing_09_skirts.html">Skirts</a>
+                                <a href="list03_clothing_10_shorts.html">Shorts</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_11_lingerie.html">Lingerie</a>
+                                <a href="list03_clothing_12_Materials.html">Responsible Materials</a>
+                                <a href="list03_clothing_13_leopard.html">Leopard Print</a>
+                                <a href="list03_clothing_14_trendidng.html">Trending Now</a>
+                                <a href="list03_clothing_15_loungewear.html">Loungewear</a>
+                            </li>
+                            <li>
+                                <a href="list03_clothing_16_party.html">Party Shop</a>
+                                <a href="list03_clothing_17_favourites.html">GANNI Favourites</a>
+                                <a href="list03_clothing_18_exclusive.html">GANNI Exclusives</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>DRESSES</b>
+                        <ol>
+                            <li>
+                                <a href="list04_dresses.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list04_dresses_01_mini.html">Mini</a>
+                                <a href="list04_dresses_02_midi.html">Midi</a>
+                                <a href="list04_dresses_03_maxi.html">Maxi</a>
+                                <a href="list04_dresses_04_flolar.html">Floral</a>
+                                <a href="list04_dresses_05_animal.html">Animal Print</a>
+                            </li> 
+                            <li>
+                                <a href="list04_dresses_06_printed.html">Printed</a>
+                                <a href="list04_dresses_07_occasion.html">Occasion</a>
+                                <a href="list04_dresses_08_vacation.html">Vacation</a>
+                                <a href="list04_dresses_09_everyday.html">Everyday</a>
+                                <a href="list04_dresses_10_wrap.html">Wrap</a>
+                            </li>
+                            <li>
+                                <a href="list04_dresses_11_bodycon.html">Bodycon</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>OUTERWEAR</b>
+                        <ol>
+                            <li>
+                                <a href="list05_outerwear.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list05_outerwear_01_jackets.html">Jackets</a>
+                            </li>
+                            <li>
+                                <a href="list05_outerwear_02_coat.html">Coats </a>
+                            </li>
+                            <li>
+                                <a href="list05_outerwear_03_blazer.html">Blazers</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>ACCESSORIES</b>
+                        <ol>
+                            <li>
+                                <a href="list06_accessories.html">VIEW ALL</a>
+                            </li>
+                            <li>
+                                <a href="list06_accessories_01_hats.html">Hats</a>
+                                <a href="list06_accessories_02_scarves.html">Scarves</a>
+                                <a href="list06_accessories_03_COLLARS.html">Collars</a>
+                                <a href="list06_accessories_04_Hairaccessories.html">Hair Accessories</a>
+                            </li>
+                            <li>
+                                <a href="list06_accessories_05_wallets.html">Wallets</a>
+                                <a href="list06_accessories_06_keyrings.html">Keyrings</a>
+                                <a href="list06_accessories_07_socks.html">Socks</a>
+                                <a href="list06_accessories_08_tech.html">Tech</a>
+                            </li>
+                            <li>
+                                <a href="list06_accessories_09_boysmells.html">Boy Smells x GANNI</a>
+                                <a href="list06_accessories_10_glitter.html">Submission Beauty Glitter</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>GANNI WORLD</b>
+                        <ol>
+                            <li>
+                                <a href="footer_about01_ganniworld.html">GANNI Girls Around the World</a>
+                            </li>
+                            <li>
+                                <a href="footer_about02_cphfw23.html">CPHFW FW23</a> 
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <input type="button" value="searchPanel" data-panel="searchPanel">
+                <input type="button" value="signInPanel" data-panel="signInPanel">
+                <input type="button" value="bagHavePanel" data-panel="bagHavePanel">
+                <input type="button" value="menuPanel" class="menuBtn">
+            </div>
+        </div>
+    </header>
+    <div class="detailContainer">
+        <ul class="detailSlider">
+            <li>
+                <img src="images/detailpage_06_accessories_16_1.jpg" alt="Green Tech Bucket Hat product image">
+            </li>
+            <li>
+                <img src="images/detailpage_06_accessories_16_2.jpg" alt="Green Tech Bucket Hat product image">
+            </li>
+        </ul>
+        <aside>
+            <a href="list06_accessories.html">ACCESSORIES</a>
+            <h2>GREEN TECH BUCKET HAT</h2>
+            <span>₩129,000</span>
+            <form>
+                <div>
+                    <span>
+                        <b>COLORS</b>
+                        <mark class="tsp">Sugar Plum</mark>
+                    </span>
+                    <ul>
+                        <li class="bsp">
+                            Sugar Plum
+                        </li>
+                        <li class="bkg">
+                            Kelly Green
+                        </li>
+                    </ul>
+                </div>
+                <div class="sizeCheck">      
+                    <h3>SIZES</h3>
+                    <ul>
+                        <li>
+                            <input type="radio" name="chooseSize" id="one">
+                            <label for="one">ONE SIZE</label>
+                        </li>
+                    </ul>
+                </div>
+                <input type="button" value="ADD TO CART" class="outlineBtn" data-panel="addCartPanel">
+            </form>
+            <div id="addCartPanel">
+                <div>
+                    <h2>ADDED TO YOUR CART</h2>
+                    <input type="button" class="btnClose" value="close">
+                </div>
+                <div>
+                    <div>
+                        <img src="images/accessories_16.jpg" alt="Green Tech Bucket Hat frontshot">
+                    </div>
+                    <div>
+                        <strong>GREEN TECH BUCKET HAT</strong>
+                        <span>₩129,000</span>
+                        <div>
+                            <strong>Color :</strong>
+                            <span>Sugar Plum</span>
+                        </div>
+                        <div>
+                            <strong>Size :</strong>
+                            <span>ONE SIZE</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="checkout_01_cart.html" class="outlineBtn">CHECK OUT</a>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <span class="material-symbols-rounded">local_shipping</span>
+                    <h3>EXPRESS DELIVERY</h3>
+                    <p>
+                        Free Delivery within 2-3 business days
+                    </p>
+                </li>
+                <li>
+                    <span class="material-symbols-rounded">reopen_window</span>
+                    <h3>FREE RETURNS</h3>
+                    <p>
+                        Free returns within 14 days
+                    </p>
+                </li>
+                <li>
+                    <span class="material-symbols-rounded">credit_score</span>
+                    <h3>SECURE PAYMENT</h3>
+                </li>
+                <li>
+                    <span class="material-symbols-rounded">store</span>
+                    <h3>FIND A STORE</h3>
+                    <input type="button" value="Availability in store" data-panel="findStorePanel">
+                    <div id="findStorePanel">
+                        <div>
+                            <h4>FIND IN STORE</h4>
+                            <input type="button" class="btnClose" value="close">
+                        </div>
+                        <div>
+                            <img src="images/accessories_16.jpg" alt="Green Tech Bucket Hat frontshot">
+                            <div>
+                                <strong>GREEN TECH BUCKET HAT</strong>
+                                <span>₩129,000</span>
+                                <div>
+                                    <strong>Color :</strong>
+                                    <span class="bulletTxt sp">Sugar Plum</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>YOUR SIZE</h3>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="findStoreSize" id="findSizeOne">
+                                        <label for="findSizeOne" class="active">ONE SIZE</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <fieldset>
+                                <legend>SELECT YOUR COUNTRY</legend>
+                                <select id="select_country">
+                                    <option value="coutry">Select a country / region</option>
+                                    <option value="uk" selected>United Kingdom </option>
+                                    <option value="netherlands">Netherlands</option>
+                                    <option value="france">France</option>
+                                    <option value="danmark">Danmark</option>
+                                    <option value="sweden">Sweden</option>
+                                    <option value="norway">Norway</option>
+                                </select>   
+                            </fieldset>
+                            <div id="uk">
+                                <span>2 STORE IN UNITED KINGDOM</span>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <strong>GANNI 36 Beak St, London W1F 9RF, United kingdom</strong>
+                                            <mark>Unavailable</mark>
+                                        </div>
+                                        <a href="tel:+44397277172">+44 397 277172</a>
+                                        <strong>Open today until 7:00 pm</strong>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong>GANNI 15 Floral St, London WC2E 9DH, United kingdom</strong>
+                                            <mark>In Stock</mark>
+                                        </div>
+                                        <a href="tel:+47397274064">+44 7397 27406</a>
+                                        <strong>Open today until 7:00 pm</strong> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>    
+                </li>
+            </ul>
+            <div>
+                <ul>
+                    <li>
+                        <h3>DESCRIPTION</h3>
+                        <P>This Green Tech Bucket Hat is made from certified recycled polyester and features a wide brim and GANNI logo. Comes in two different sizes.</P>
+                    </li>
+                    <li>
+                        <h3>DETAILS</h3>
+                        <P>• Composition: 100% certified recycled polyester</P>
+                        <P>• Lining: 100% certified recycled polyester</P>
+                        <P>• Wide brim</P>
+                        <P>• GANNI logo</P>
+                        <P>• Made in: China</P>
+                        <P>• Product ID: A4626</P>
+                    <li>
+                        <h3>SIZE &amp; FIT</h3>
+                        <P>• Lightweight, tech fabric</P>
+                    </li>
+                    <li>
+                        <h3>CARE GUIDE</h3>
+                        <P>• 100% Recycled Polyester</P>
+                        <P>• Do Not Wash</P>
+                        <P>• Do Not Bleach</P>
+                        <P>• Do Not Tumble Dry</P>
+                        <P>• Do Not Iron </P>
+                        <P>• Do Not Dryclean</P>
+                    </li>
+                    <li>
+                        <h3>SHOPPING INFORMATION</h3>
+                        <P>Place your order before 3PM (CET), and we&#39;ll ship your order the same day. We aim to deliver within 2-6 days depending on the delivery country. We always offer free returns on all orders. For more shipping information, please see our shipping and returns information. Flat dry Use wool detergent Do not Soak Reshape while wet </P>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div>
+            <h2>WHY NOT TRY</h2>
+            <ul class="tryProductSlider">
+                <li>
+                    <a href="detail_accessories_13.html">
+                        <img src="images/accessories_13.jpg" alt="Printed Tech Bucket Hat frontShot" data-hover="accessories_13_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_13.html">Printed Tech Bucket Hat</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+                <li>
+                    <a href="detail_accessories_14.html">
+                        <img src="images/accessories_14.jpg" alt="Striped Tech Bucket Hat frontShot" data-hover="accessories_14_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_14.html">Striped Tech Bucket Hat</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+                <li>
+                    <a href="detail_accessories_15.html">
+                        <img src="images/accessories_15.jpg" alt="Green Tech Bucket Hat frontShot" data-hover="accessories_15_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_15.html">Green Tech Bucket Hat</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+                <li>
+                    <a href="detail_accessories_17.html">
+                        <img src="images/accessories_17.jpg" alt="Black Tech Bucket Hat frontShot" data-hover="accessories_17_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_17.html">Black Tech Bucket Hat</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+                <li>
+                    <a href="detail_accessories_09.html">
+                        <img src="images/accessories_09.jpg" alt="Software Heavy Cotton Cap frontShot" data-hover="accessories_09_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_09.html">Software Heavy Cotton Cap</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+                <li>
+                    <a href="detail_accessories_10.html">
+                        <img src="images/accessories_10.jpg" alt="Software Heavy Cotton Cap frontShot" data-hover="accessories_10_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_10.html">Software Heavy Cotton Cap</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+                <li>
+                    <a href="detail_accessories_11.html">
+                        <img src="images/accessories_11.jpg" alt="Software Heavy Cotton Cap frontShot" data-hover="accessories_11_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_11.html">Software Heavy Cotton Cap</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+                <li>
+                    <a href="detail_accessories_12.html">
+                        <img src="images/accessories_12.jpg" alt="Software Heavy Cotton Cap frontShot" data-hover="accessories_12_Hover">
+                    </a>
+                    <div>
+                        <a href="detail_accessories_12.html">Software Heavy Cotton Cap</a>
+                        <span>₩129,000</span>
+                    </div>
+                    <fieldset>
+                        <select>
+                            <option value="size">Your size</option>
+                            <option value="32">ONE SIZE</option>
+                        </select>
+                        <input type="button" value="ADD TO CART" data-panel="bagHavePanel">   
+                    </fieldset>
+                </li>
+            </ul>
+        </div>
+        <div class="underMenuBar">
+            <ol>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="list06_accessories.html">ACCESSORIES</a>
+                </li>
+                <li>
+                    GREEN TECH BUCKET HAT
+                </li>
+            </ol>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div class="newsletter">
+                <h3>
+                    NEWSLETTER
+                    <input type="button" value="question mark" data-popup="questionComment">
+                </h3>
+                <input type="email" placeholder="Enter your email address" title="Enter your email address">
+                <input type="button" value="send" data-popup="emailSend">
+                <p id="questionComment">
+                    Sign up below and receive GANNI World updates, including collection launches, early access to
+                    products and collaborations and event invitations Enter your email address.
+                </p>
+            </div>
+            <div class="customer">
+                <h3>CUSTOMER SERVICE</h3>
+                <span>Monday to Friday - 5PM - Midnight KST (10AM - 5PM CET)</span>
+                <ul>
+                    <li>
+                        <a href="tel:+4533324457">
+                            +45 33 32 44 57
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:CUSTOMERSERVICE@GANNI.COM">
+                            CUSTOMERSERVICE@GANNI.COM
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="assistance">
+                <h3>ASSISTANCE &amp; LEGAL</h3>
+                <ul>
+                    <li>
+                        <a href="footer_assistance01_help.html">Help</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance02_delivery.html">Delivery</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance03_privacyPolicy.html">Privacy policy</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance04_faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance05_returns.html">Returns</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance06_cookiePolicy.html">Cookie policy</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance07_e-giftcard.html">E-gift card</a>
+                    </li>
+                    <li>
+                        <a href="footer_assistance08_TermsConditions.html">Terms & conditions</a>
+                    </li>
+                    <li>
+                        <a href="my_account_04_tracking.html">Track Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="aboutGanni">
+                <h3>ABOUT GANNI</h3>
+                <ul>
+                    <li>
+                        <a href="footer_about01_ganniworld.html">GANNI Girls Around the World</a>
+                    </li>
+                    <li>
+                        <a href="footer_about02_cphfw23.html">CPHFW FW23</a>
+                    </li>
+                    <li>
+                        <a href="footer_about03_press.html">Press</a>
+                    </li>
+                    <li>
+                        <a href="footer_about04_careers.html">Careers</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sns">
+                <h3>FOLLOW US</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/ganni/">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/ganniofficial">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@ganni_official?lang=en">Tik Tok</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/c/GANNI">Youtube</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ganniStore">
+                <div class="storeLocator">
+                    <h3>STORE LOCATOR</h3>
+                    <a href="footer_storelocator.html">Find a store nearby</a>
+                </div>
+                <div class="selectCountry">
+                    <div class="deliveryCountry">
+                        <h3>DELIVERY COUNTRY/REGION</h3>
+                        <select id="countryname">
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="CA">Canada</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CZ">Czen Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="EE">Estonia</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                            <option value="GR">Greece</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IT">Italy</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NO">Norway</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="RO">Romsnia</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="ES">Spain</option>
+                            <option value="KR" selected="selected">South korea</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="US">United States</option>
+                        </select>
+                    </div>
+                    <div class="language">
+                        <h3>LANGUAGE</h3>
+                        <select name="language" id="select_language">
+                            <option value="en" selected="selected">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div>
+            ©GANNI 2023
+        </div>
+    </footer>
+</body>
+</html>
