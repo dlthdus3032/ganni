@@ -1678,7 +1678,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
     /* footer - assistance & legal */
 
-    .assistanceContainer{padding-top: 75px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .assistanceContainer{padding-top: 75px; background: linear-gradient(#f5f5f5, #ffffff);}
     .assistanceContainer > .assistancewrap{padding: 25px 6% 30px;}
     .assistanceContainer > .assistancewrap .mainContents{width: 100%; margin-bottom: 30px;}
     .assistanceContainer > .assistancewrap .mainContents h2{
@@ -1960,7 +1960,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* aboutganni - press / careers */
-    .aboutContainer{padding-top: 75px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .aboutContainer{padding-top: 75px; background: linear-gradient(#f5f5f5, #ffffff);}
     .aboutContainer > .aboutWrap{padding: 25px 6% 30px;}
     .aboutContainer > .aboutWrap > div{
         margin-bottom: 30px;
@@ -2041,7 +2041,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* footer - store locator */
-    .storelocatorContainer{padding-top: 75px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .storelocatorContainer{padding-top: 75px; background: linear-gradient(#f5f5f5, #ffffff);}
     .storelocatorContainer > div:first-of-type{padding: 25px 3% 0; box-sizing: border-box;}
     .storelocatorContainer > div:first-of-type{width: 100%;}
     .storelocatorContainer > div:first-of-type h2{
@@ -3662,7 +3662,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
     /* footer - assistance & legal */
 
-    .assistanceContainer{padding-top: 90px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .assistanceContainer{padding-top: 90px; background: linear-gradient(#f5f5f5, #ffffff);}
     .assistanceContainer > .assistancewrap{margin: 0 auto; padding: 40px 3% 100px;}
     .assistanceContainer > .assistancewrap .mainContents{width: 100%; margin-bottom: 80px;}
     .assistanceContainer > .assistancewrap .mainContents h2{
@@ -3813,7 +3813,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* aboutganni - press / careers */
-    .aboutContainer{padding-top: 90px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .aboutContainer{padding-top: 90px; background: linear-gradient(#f5f5f5, #ffffff);}
     .aboutContainer > .aboutWrap{ padding: 40px 3% 100px;}
     .aboutContainer > .aboutWrap > div{
         margin-bottom: 80px;
@@ -4001,7 +4001,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .about02Container .underMenuBar{margin-top: 100px;}
 
     /* footer - store locator */
-    .storelocatorContainer{padding-top: 90px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .storelocatorContainer{padding-top: 90px; background: linear-gradient(#f5f5f5, #ffffff);}
     .storelocatorContainer > div:first-of-type{padding: 40px 3% 0; box-sizing: border-box;}
     .storelocatorContainer > div:first-of-type{width: 100%;}
     .storelocatorContainer > div:first-of-type h2{
@@ -5605,7 +5605,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* footer - assistance & legal */
-    .assistanceContainer{width: 100%; padding-top: 90px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .assistanceContainer{width: 100%; padding-top: 90px; background: linear-gradient(#f5f5f5, #ffffff);}
     .assistanceContainer > .assistancewrap{max-width: 1255px; margin: 0 auto; padding: 40px 0 150px;}
     .assistanceContainer > .assistancewrap::after{content: ''; display: block; clear: both;}
     .assistanceContainer > .assistancewrap .mainContents{float: left; width: 77.3%;}
@@ -5756,7 +5756,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* aboutganni - press / careers */
-    .aboutContainer{width: 100%; padding-top: 90px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .aboutContainer{width: 100%; padding-top: 90px; background: linear-gradient(#f5f5f5, #ffffff);}
     .aboutContainer > .aboutWrap{max-width: 1255px; margin: 0 auto; padding: 40px 0 150px;}
     .aboutContainer > .aboutWrap::after{content: ''; display: block; clear: both;}
     .aboutContainer > .aboutWrap > div{float: left; width: 77.3%;}
@@ -5949,7 +5949,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* footer - store locator */
-    .storelocatorContainer{width: 100%; padding-top: 90px; background: linear-gradient(#f1f1f1, #ffffff);}
+    .storelocatorContainer{width: 100%; padding-top: 90px; background: linear-gradient(#f5f5f5, #ffffff);}
     .storelocatorContainer > div:first-of-type{max-width: 1250px; padding-top: 40px; margin: 0 auto;}
     .storelocatorContainer > div:first-of-type{width: 78.4%;}
     .storelocatorContainer > div:first-of-type h2{
