@@ -62,7 +62,7 @@ function customSlider(slideName,slideSlideWidth,slideMaxSlides,slideMinSlides,sl
     });
 }
 
-$(window).resize(function(){document.location.reload();})
+$(window).resize();
 
 
 function resizeContents(){
@@ -74,11 +74,11 @@ function resizeContents(){
                 slideWidth: 1300,
                 maxSlides: 1,
                 minSlides: 1,
-                shrinkItems: true
+                shrinkItems: true,
+                touchEnabled: false
             }
         );
     }
-    // todo. 1280보다 커졌을때 / 상황으로 만들기.
 }
 
 function headerSlide(){
