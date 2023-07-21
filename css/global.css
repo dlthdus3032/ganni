@@ -25,6 +25,7 @@ footer > div div ul li a ,
 footer > div .newsletter input[type="email"]::placeholder ,
 footer > div .storeLocator a ,
 footer > div:nth-of-type(3) ,
+footer > div .newsletter #questionComment.active ,
 .mainContainer h2 ,
 .mainContainer > div .main_slider li div a ,
 .mainContainer > div .main_slider li fieldset input[value="ADD TO CART"] ,
@@ -111,7 +112,7 @@ footer > div:nth-of-type(3) ,
 #signInPanel > div h3 ,
 #signInPanel > div:nth-of-type(2) form input::placeholder ,
 #signInPanel > div:nth-of-type(2) form label ,
-#signInPanel > #forgotPassword form p ,
+#signInPanel > #forgotPassword .passwordSend p ,
 #signInPanel > #forgotPassword #resetPassword strong ,
 #signInPanel > #forgotPassword #resetPassword p,
 #signInPanel > #forgotPassword form input[type='email']::placeholder ,
@@ -290,6 +291,7 @@ footer > div .newsletter input[type="email"] ,
 .tryProductSlider li fieldset input[type="button"] ,
 .contactusContainer .mainContents > div > form > fieldset > input ,
 .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div address ,
+.storelocatorContainer > div:first-of-type > .storeMenu input[type='search'] ,
 option ,
 select
 {font-family: 'Poppins', sans-serif;}
@@ -362,7 +364,6 @@ img{width: 100%;
     margin-top: -16px;
     outline: 0;
     background-color: #fff;
-    border-radius: 5px;
     text-indent: -9999px;
     z-index: 1;
     border: 2px solid #000000;
@@ -459,17 +460,17 @@ img{width: 100%;
 
 @media screen and (max-width : 767px) {
     .bx-wrapper .bx-controls-direction a{
-        width: 25px;
-        height: 30px;
-        border-radius: 7px;
+        width: 24px;
+        height: 31px;
+        border-radius: 8px;
     }
     .bx-wrapper .bx-controls-direction .bx-prev{
         left: 3%;
-        background: rgb(255, 255, 255, 70%) url(../images/slider_prev.png) 45% center / 15px no-repeat;
+        background: rgb(255, 255, 255, 50%) url(../images/slider_prev.png) 40% center / 16px no-repeat;
     }
     .bx-wrapper .bx-controls-direction .bx-next{
         right: 3%;
-        background: rgb(255, 255, 255, 70%) url(../images/slider_next.png) 52% center / 15px no-repeat;
+        background: rgb(255, 255, 255, 50%) url(../images/slider_next.png) 55% center / 16px no-repeat;
     }
     .bx-wrapper .bx-pager{
         display: none;
@@ -518,25 +519,25 @@ img{width: 100%;
         background: url(../images/header_menu_remove.png) center / contain no-repeat;
     }
     header > div nav ul > li:first-of-type b{color: #79eb72;}
-    header > div nav ul > li ol{
-        display: none;
-    }
-    header > div nav ul > li b.active+ol{
+    header > div nav ul > li b.active+.submenu{
         display: block; padding: 0 3% 25px;
     }
-    header > div nav ul > li b.active+ol li:not(:last-of-type){
+    header > div nav ul > li b.active+.submenu li:not(:last-of-type){
         padding-bottom: 15px;
     }
-    header > div nav ul > li b.active+ol li a{
+    header > div nav ul > li b.active+.submenu li a{
         display: block; font-size: 12px; font-weight: 500; color: #444444;
     }
-    header > div nav ul > li b.active+ol li a:not(:last-of-type){
+    header > div nav ul > li b.active+.submenu li a:not(:last-of-type){
         padding-bottom: 15px;
     }
-    header > div div{
+    header > div nav ul > li .submenu{
+        display: none;
+    }
+    header > div > div{
         right: 3%; z-index: 10;
     }
-    header > div div a{width: 19px; line-height: 19px; margin-left: 12px; vertical-align: middle;
+    header > div > div a{width: 19px; line-height: 19px; margin-left: 12px; vertical-align: middle;
         display: inline-block; text-indent: -9999px; background: url(../images/header_sign_in_icon.png) center / contain no-repeat;
     }
     header:hover > div > div > a{background-image: url(../images/header_sign_icon.png);}
@@ -569,7 +570,7 @@ img{width: 100%;
     }
     
     /* search - panel*/
-    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%;}
+    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
     #searchPanel > div{max-width: 100%; padding: 0 6%;}
     #searchPanel > div:not(:first-of-type){padding-top: 40px;}
     #searchPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -601,7 +602,7 @@ img{width: 100%;
 
     /* sign in - panel*/
     #signInPanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%;
+        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;
     }
     #signInPanel > div{max-width: 100%; padding: 0 6%;}
     #signInPanel > div:not(:first-of-type){padding: 35px 6% 30px;}
@@ -648,23 +649,20 @@ img{width: 100%;
     }
     #signInPanel > #forgotPassword{display: none;}
     #signInPanel > #forgotPassword.active{display: block;}
-    #signInPanel > #forgotPassword form p
+    #signInPanel > #forgotPassword .passwordSend p
     {font-size: 10px; font-weight: 500; color: #828282; line-height: 15px; margin-bottom: 25px;
     }
-    #signInPanel > #forgotPassword form input[type='email']{
+    #signInPanel > #forgotPassword .passwordSend input[type='email']{
         width: 100%; height: 50px; padding: 0 10px; border: 2px solid rgba(0,0,0,0); border-radius: 8px; background-color: #f3f3f3; box-sizing: border-box; margin-bottom: 25px;
         transition: border 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    #signInPanel > #forgotPassword form input[type='email']:hover{
+    #signInPanel > #forgotPassword .passwordSend input[type='email']:hover{
         border: 2px solid #d0d0d0;
     }
-    #signInPanel > #forgotPassword form input[type='email']::placeholder{font-size: 11px; font-weight: 400; color: #828282;}
-    #signInPanel > #forgotPassword form input[value='SEND']{width: 100%; height: 50px; font-size: 14px; font-weight: 600;}
+    #signInPanel > #forgotPassword .passwordSend input[type='email']::placeholder{font-size: 11px; font-weight: 400; color: #828282;}
+    #signInPanel > #forgotPassword .passwordSend input[value='SEND']{width: 100%; height: 50px; font-size: 14px; font-weight: 600;}
     #signInPanel > #forgotPassword #resetPassword{display: none;}
     #signInPanel > #forgotPassword #resetPassword.active{display: block;}
-    #signInPanel > #forgotPassword #resetPassword{
-        padding: 35px 0 30px 0; border-bottom: 1px solid #e5e5e5;
-    }
     #signInPanel > #forgotPassword #resetPassword strong{
         display: block; font-size: 14px; font-weight: 600; color: #000000; margin-bottom: 30px;
     }
@@ -688,7 +686,7 @@ img{width: 100%;
 
 
     /* shopping - panel*/
-    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%;}
+    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
     #bagPanel > div{max-width: 100%; padding: 0 6%; margin: 0 auto;}
     #bagPanel > div:not(:first-of-type){padding-top: 40px;}
     #bagPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -706,7 +704,7 @@ img{width: 100%;
     } 
 
     /* shopping add - panel*/
-    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%;}
+    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
     #bagHavePanel > div{max-width: 100%; padding: 0 6%;}
     #bagHavePanel > div{border-bottom: 1px solid #e5e5e5;}
     #bagHavePanel > div{line-height: 55px;}
@@ -804,7 +802,7 @@ img{width: 100%;
 
 
     /* detail checkout - panel */
-    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%;}
+    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
     #addCartPanel > div{max-width: 100%; padding: 0 6%;}
     #addCartPanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #addCartPanel > div:first-of-type{line-height: 55px;}
@@ -831,7 +829,7 @@ img{width: 100%;
 
 
     /* detail store - panel */
-    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%;}
+    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
     #findStorePanel > div{max-width: 100%; padding: 0 6%;}
     #findStorePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #findStorePanel > div:first-of-type{line-height: 55px;}
@@ -1043,7 +1041,7 @@ img{width: 100%;
 
 @media screen and (min-width : 768px) and (max-width : 1279px){
     .bx-wrapper .bx-controls-direction a{
-        width: 29px;
+        width: 27px;
         height: 34px;
         border-radius: 9px;
     }
@@ -1100,25 +1098,25 @@ img{width: 100%;
         background: url(../images/header_menu_remove.png) center / contain no-repeat;
     }
     header > div nav ul > li:first-of-type b{color: #79eb72;}
-    header > div nav ul > li ol{
+    header > div nav ul > li .submenu{
         display: none;
     }
-    header > div nav ul > li b.active+ol{
+    header > div nav ul > li b.active+.submenu{
         display: block; padding: 0 3% 25px;
     }
-    header > div nav ul > li b.active+ol li:not(:last-of-type){
+    header > div nav ul > li b.active+.submenu li:not(:last-of-type){
         padding-bottom: 15px;
     }
-    header > div nav ul > li b.active+ol li a{
+    header > div nav ul > li b.active+.submenu li a{
         display: block; font-size: 12px; font-weight: 500; color: #444444;
     }
-    header > div nav ul > li b.active+ol li a:not(:last-of-type){
+    header > div nav ul > li b.active+.submenu li a:not(:last-of-type){
         padding-bottom: 15px;
     }
-    header > div div{
+    header > div > div{
         right: 3%; z-index: 10;
     }
-    header > div div a{width: 20px; line-height: 20px; margin-left: 12px; vertical-align: middle;
+    header > div > div a{width: 20px; line-height: 20px; margin-left: 12px; vertical-align: middle;
         display: inline-block; text-indent: -9999px; background: url(../images/header_main_sign_in_icon.png) center / contain no-repeat;
     }
     header.active > div > div > a{background-image: url(../images/header_sign_in_icon.png);}
@@ -1153,7 +1151,7 @@ img{width: 100%;
     }
 
     /* search - panel*/
-    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
     #searchPanel > div{padding: 0 25px;}
     #searchPanel > div:not(:first-of-type){padding-top: 40px;}
     #searchPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1185,7 +1183,7 @@ img{width: 100%;
 
     /* sign in - panel*/
     #signInPanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;
+        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;
     }
     #signInPanel > div{padding: 0 25px;}
     #signInPanel > div:not(:first-of-type){padding: 35px 25px 30px;}
@@ -1232,23 +1230,20 @@ img{width: 100%;
     }
     #signInPanel > #forgotPassword{display: none;}
     #signInPanel > #forgotPassword.active{display: block;}
-    #signInPanel > #forgotPassword form p
+    #signInPanel > #forgotPassword .passwordSend p
     {font-size: 10px; font-weight: 500; color: #828282; line-height: 15px; margin-bottom: 25px;
     }
-    #signInPanel > #forgotPassword form input[type='email']{
+    #signInPanel > #forgotPassword .passwordSend input[type='email']{
         width: 100%; height: 50px; padding: 0 10px; border: 2px solid rgba(0,0,0,0); border-radius: 8px; background-color: #f3f3f3; box-sizing: border-box; margin-bottom: 25px;
         transition: border 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    #signInPanel > #forgotPassword form input[type='email']:hover{
+    #signInPanel > #forgotPassword .passwordSend input[type='email']:hover{
         border: 2px solid #d0d0d0;
     }
-    #signInPanel > #forgotPassword form input[type='email']::placeholder{font-size: 11px; font-weight: 400; color: #828282;}
-    #signInPanel > #forgotPassword form input[value='SEND']{width: 100%; height: 50px; font-size: 14px; font-weight: 600;}
+    #signInPanel > #forgotPassword .passwordSend input[type='email']::placeholder{font-size: 11px; font-weight: 400; color: #828282;}
+    #signInPanel > #forgotPassword .passwordSend input[value='SEND']{width: 100%; height: 50px; font-size: 14px; font-weight: 600;}
     #signInPanel > #forgotPassword #resetPassword{display: none;}
     #signInPanel > #forgotPassword #resetPassword.active{display: block;}
-    #signInPanel > #forgotPassword #resetPassword{
-        padding: 35px 0 30px 0; border-bottom: 1px solid #e5e5e5;
-    }
     #signInPanel > #forgotPassword #resetPassword strong{
         display: block; font-size: 14px; font-weight: 600; color: #000000; margin-bottom: 30px;
     }
@@ -1272,7 +1267,7 @@ img{width: 100%;
 
 
     /* shopping - panel*/
-    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
     #bagPanel > div{padding: 0 25px;}
     #bagPanel > div:not(:first-of-type){padding-top: 40px;}
     #bagPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1290,7 +1285,7 @@ img{width: 100%;
     } 
 
     /* shopping add - panel*/
-    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-x: auto;}
     #bagHavePanel > div{padding: 0 25px;}
     #bagHavePanel > div{border-bottom: 1px solid #e5e5e5;}
     #bagHavePanel > div{line-height: 55px;}
@@ -1389,7 +1384,7 @@ img{width: 100%;
 
 
     /* detail checkout - panel */
-    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; overflow-y: auto;}
     #addCartPanel > div{padding: 0 25px;}
     #addCartPanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #addCartPanel > div:first-of-type{line-height: 55px;}
@@ -1416,7 +1411,7 @@ img{width: 100%;
 
 
     /* detail store - panel */
-    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
 
     #findStorePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5; padding: 0 25px;}
     #findStorePanel > div:first-of-type{line-height: 55px;}
@@ -1468,7 +1463,7 @@ img{width: 100%;
         width: 100%; height: 45px; appearance: none; padding: 0 15px; border: none; border-radius: 10px; 
         background: #f3f3f3 url(../images/panel_expand_more.png) right 15px center / 12px no-repeat;
     }
-    #findStorePanel > div > #uk{padding-top: 30px;}
+    #findStorePanel > div > #uk{padding: 30px;}
     #findStorePanel > div > #uk span{
         display: block; font-size: 11px; font-weight: 400; color: #707070; margin-bottom: 20px;
     }
@@ -1590,9 +1585,9 @@ img{width: 100%;
 
 @media screen and (min-width: 1280px){
     .bx-wrapper .bx-controls-direction a{
-        width: 30px;
+        width: 28px;
         height: 35px;
-        border-radius: 8px;
+        border-radius: 9px;
     }
 
     .bx-wrapper .bx-controls-direction .bx-prev{
@@ -1643,54 +1638,56 @@ img{width: 100%;
         border-bottom: 4px solid #79eb72; vertical-align: middle;
     }
     header > div nav ul > li b{font-size: 12px; color: #000000; padding-bottom: 2px; vertical-align: middle;}
-    header > div nav ul > li ol{
-        display: none; position: absolute; width: 113.5%; left: -7%;
+    header > div nav ul > li .submenu{
+         position: absolute; width: 113.5%; left: -7%;
     }
-    header > div nav ul > li:hover ol{
+    header > div nav ul > li .submenu ol{
         display: flex; justify-content: center; background-color: #fff;
     }
-    header > div nav ul > li ol li{text-align: left; margin: 15px 0 65px 0;}
-    header > div nav ul > li ol li:not(:first-child){margin-left: 160px;}
-    header > div nav ul > li ol li:last-of-type{padding-right: 2%;}
+    header > div nav ul > li .submenu ol li{text-align: left; margin: 15px 0 65px 0;}
+    header > div nav ul > li .submenu ol li:not(:first-child){margin-left: 160px;}
+    header > div nav ul > li .submenu ol li:last-of-type{padding-right: 2%;}
     header > div nav ul li a{ display: block; line-height: 11px; margin-bottom: 30px;
     } 
-    header > div nav ul li ol li{font-size: 11px; font-weight: 500; color: #444444;}
-    header > div nav ul li ol li:first-child a{font-size: 11px; font-weight: 600; color: #000000;}
-    header > div nav ul li ol li a{font-size: 11px; font-weight: 500; color: #444444;}
-    header > div nav ul li:last-of-type ol li a{font-size: 11px; font-weight: 500; color: #444444;}
-
-    header > div div{
+    header > div nav ul li .submenu ol li{font-size: 11px; font-weight: 500; color: #444444;}
+    header > div nav ul li .submenu ol li:first-child a{font-size: 11px; font-weight: 600; color: #000000;}
+    header > div nav ul li .submenu ol li a{font-size: 11px; font-weight: 500; color: #444444;}
+    header > div nav ul li:last-of-type .submenu ol li a{font-size: 11px; font-weight: 500; color: #444444;}
+    header > div > div{
         right: 0; 
     }
-    header > div div a{width: 20px; line-height: 20px; margin-left: 25px; vertical-align: middle;
+    header > div nav ul > li .submenu{
+        display: none;
+    }
+    header > div > div a{width: 20px; line-height: 20px; margin-left: 25px; vertical-align: middle;
         display: inline-block; text-indent: -9999px; background: url(../images/header_main_sign_icon.png) center / contain no-repeat;
     }
     header:hover > div > div > a{background-image: url(../images/header_sign_in_icon.png);}
-    header > div div input[type="button"]{ 
+    header > div > div input[type="button"]{ 
         padding: 0; border-style: none; background-color: transparent; width: 20px; line-height: 20px; cursor: pointer;
         text-indent: -9999px; background: center / contain no-repeat transparent;
     }
-    header > div div input:not(:first-of-type)[type="button"]{margin-left: 25px;}
-    header > div div input[value="searchPanel"]{
+    header > div > div input:not(:first-of-type)[type="button"]{margin-left: 25px;}
+    header > div > div input[value="searchPanel"]{
         background-image: url('../images/header_search_icon.png'); 
     }
-    header > div div input[value="signInPanel"]{
+    header > div > div input[value="signInPanel"]{
         background-image: url('../images/header_sign_icon.png'); 
     }
-    header > div div a{
+    header > div > div a{
         background-image: url('../images/header_sign_in_icon.png'); 
     }
-    header > div div input[value="bagPanel"]{
+    header > div > div input[value="bagPanel"]{
         background-image: url('../images/header_shoppingbag_icon.png'); 
     }
-    header > div div input[value="bagHavePanel"]{
+    header > div > div input[value="bagHavePanel"]{
         background-image: url('../images/header_shoppingbag_add_icon.png'); 
     }
     header > div > div > input[value="menuPanel"]{display: none;}
 
 
     /* search - panel*/
-    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
     #searchPanel > div{padding: 0 25px;}
     #searchPanel > div:not(:first-of-type){padding-top: 40px;}
     #searchPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1717,12 +1714,20 @@ img{width: 100%;
         font-size: 11px; font-weight: 600; color: #6c6c6c; margin-top: 35px;
     }
     #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a{
-        display: block; font-size: 11px; font-weight: 500; color: #6c6c6c; margin-top: 25px;
+        display: inline-block; font-size: 11px; font-weight: 500; color: #6c6c6c; margin-top: 25px;
     }
-
+    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a:hover{
+        color: #000000;
+    }
+    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a::after:hover{
+        width: 100%;
+    }
+    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a::after{
+        content: ''; display: block; width: 5px; height: 3px; margin-top: 5px; transition: width 0.25s ease-in-out;
+    }
     /* sign in - panel*/
     #signInPanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;
+        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;
     }
     #signInPanel > div{padding: 0 25px;}
     #signInPanel > div:not(:first-of-type){padding: 35px 25px 30px;}
@@ -1769,23 +1774,20 @@ img{width: 100%;
     }
     #signInPanel > #forgotPassword{display: none;}
     #signInPanel > #forgotPassword.active{display: block;}
-    #signInPanel > #forgotPassword form p
+    #signInPanel > #forgotPassword .passwordSend p
     {font-size: 10px; font-weight: 500; color: #828282; line-height: 15px; margin-bottom: 25px;
     }
-    #signInPanel > #forgotPassword form input[type='email']{
+    #signInPanel > #forgotPassword .passwordSend input[type='email']{
         width: 100%; height: 50px; padding: 0 10px; border: 2px solid rgba(0,0,0,0); border-radius: 8px; background-color: #f3f3f3; box-sizing: border-box; margin-bottom: 25px;
         transition: border 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    #signInPanel > #forgotPassword form input[type='email']:hover{
+    #signInPanel > #forgotPassword .passwordSend input[type='email']:hover{
         border: 2px solid #d0d0d0;
     }
-    #signInPanel > #forgotPassword form input[type='email']::placeholder{font-size: 11px; font-weight: 400; color: #828282;}
-    #signInPanel > #forgotPassword form input[value='SEND']{width: 100%; height: 50px; font-size: 14px; font-weight: 600;}
+    #signInPanel > #forgotPassword .passwordSend input[type='email']::placeholder{font-size: 11px; font-weight: 400; color: #828282;}
+    #signInPanel > #forgotPassword .passwordSend input[value='SEND']{width: 100%; height: 50px; font-size: 14px; font-weight: 600;}
     #signInPanel > #forgotPassword #resetPassword{display: none;}
     #signInPanel > #forgotPassword #resetPassword.active{display: block;}
-    #signInPanel > #forgotPassword #resetPassword{
-        padding: 35px 0 30px 0; border-bottom: 1px solid #e5e5e5;
-    }
     #signInPanel > #forgotPassword #resetPassword strong{
         display: block; font-size: 14px; font-weight: 600; color: #000000; margin-bottom: 30px;
     }
@@ -1809,7 +1811,7 @@ img{width: 100%;
 
 
     /* shopping - panel*/
-    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
     #bagPanel > div{padding: 0 25px;}
     #bagPanel > div:not(:first-of-type){padding-top: 40px;}
     #bagPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1827,7 +1829,7 @@ img{width: 100%;
     } 
 
     /* shopping add - panel*/
-    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
     #bagHavePanel > div{padding: 0 25px;}
     #bagHavePanel > div{border-bottom: 1px solid #e5e5e5;}
     #bagHavePanel > div{line-height: 55px;}
@@ -1926,7 +1928,7 @@ img{width: 100%;
 
 
     /* detail checkout - panel */
-    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
     #addCartPanel > div{padding: 0 25px;}
     #addCartPanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #addCartPanel > div:first-of-type{line-height: 55px;}
@@ -1953,7 +1955,7 @@ img{width: 100%;
 
 
     /* detail store - panel */
-    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%;}
+    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
 
     #findStorePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5; padding: 0 25px;}
     #findStorePanel > div:first-of-type{line-height: 55px;}
@@ -2005,7 +2007,7 @@ img{width: 100%;
         width: 100%; height: 45px; appearance: none; padding: 0 15px; border: none; border-radius: 10px; 
         background: #f3f3f3 url(../images/panel_expand_more.png) right 15px center / 12px no-repeat;
     }
-    #findStorePanel > div > #uk{padding-top: 30px;}
+    #findStorePanel > div > #uk{padding: 30px;}
     #findStorePanel > div > #uk span{
         display: block; font-size: 11px; font-weight: 400; color: #707070; margin-bottom: 20px;
     }
