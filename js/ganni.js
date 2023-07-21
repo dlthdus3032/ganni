@@ -1,6 +1,9 @@
 
 
 $(function(){
+    $( window ).resize(function() {
+        resizeContents();
+    });
     customSlider(".main_slider",480,4,1,1,true,0,false);
     customSlider(".tryProductSlider",480,4,1,1,true,0,false);
     customSlider(".newinSlider",350,4,2,0,true,0,false);
@@ -47,6 +50,7 @@ $(function(){
     accountPopup(".myaddressContainer .accountMain > div > #addAddress > form > input[type='button']","#addAddress" , ".myaddressContainer .accountMain > div > #addressApply > input[type='button']");
     accountPopup(".trackingContainer .accountMain > div > #trackingModify form input[type='button']","#trackingModify");
     accountPopup(".paymentContainer .accountMain > div > #addPayment form input[type='button']","#addPayment" , ".paymentContainer .accountMain > div > #savePayment > input[type='button']");
+    // slideToggle();
 });
 
 
@@ -62,9 +66,6 @@ function customSlider(slideName,slideSlideWidth,slideMaxSlides,slideMinSlides,sl
     });
 }
 
-$(window).resize();
-
-
 function resizeContents(){
     if(window.matchMedia("(max-width: 768px)").matches){
         $(".detailSlider").bxSlider({
@@ -78,7 +79,10 @@ function resizeContents(){
                 touchEnabled: false
             }
         );
+    } else if(window.matchMedia("(min-width: 769px)").matches){
+
     }
+    // todo. 1280보다 커졌을때 / 상황으로 만들기.
 }
 
 function headerSlide(){
@@ -104,6 +108,13 @@ function headerSlide(){
         });
     }
 }
+
+// function slideToggle(){
+//     $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").click(function(){
+//         $(this).next('div').slideToggle();
+//         if($(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4"))
+//     });
+// }
 
 
 

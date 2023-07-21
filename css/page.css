@@ -1682,7 +1682,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap{padding: 25px 6% 30px;}
     .assistanceContainer > .assistancewrap .mainContents{width: 100%; margin-bottom: 30px;}
     .assistanceContainer > .assistancewrap .mainContents h2{
-        font-size: 38px; font-weight: 400; color: #333333; margin-bottom: 20px;
+        font-size: 38px; font-weight: 500; color: #333333; margin-bottom: 20px;
     }
     .assistanceContainer > .assistancewrap .mainContents > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 20px; border-bottom: 1px solid #c4c4c4;
@@ -1966,7 +1966,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         margin-bottom: 30px;
     }
     .aboutContainer > .aboutWrap > div > h2{
-        font-size: 38px; font-weight: 400; color: #333333; margin-bottom: 25px;
+        font-size: 38px; font-weight: 500; color: #333333; margin-bottom: 25px;
     }
     .aboutContainer > .aboutWrap > div > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 25px; border-bottom: 1px solid #c4c4c4;
@@ -2045,7 +2045,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .storelocatorContainer > div:first-of-type{padding: 25px 3% 0; box-sizing: border-box;}
     .storelocatorContainer > div:first-of-type{width: 100%;}
     .storelocatorContainer > div:first-of-type h2{
-        font-size: 42px; font-weight: 400; color: #333333; margin-bottom: 30px;
+        font-size: 42px; font-weight: 500; color: #333333; margin-bottom: 30px;
     }
     .storelocatorContainer > div:first-of-type > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
@@ -3666,7 +3666,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap{margin: 0 auto; padding: 40px 3% 100px;}
     .assistanceContainer > .assistancewrap .mainContents{width: 100%; margin-bottom: 80px;}
     .assistanceContainer > .assistancewrap .mainContents h2{
-        font-size: 47px; font-weight: 400; color: #333333; margin-bottom: 30px;
+        font-size: 47px; font-weight: 500; color: #333333; margin-bottom: 30px;
     }
     .assistanceContainer > .assistancewrap .mainContents > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
@@ -3819,7 +3819,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         margin-bottom: 80px;
     }
     .aboutContainer > .aboutWrap > div > h2{
-        font-size: 47px; font-weight: 400; color: #333333; margin-bottom: 30px;
+        font-size: 47px; font-weight: 500; color: #333333; margin-bottom: 30px;
     }
     .aboutContainer > .aboutWrap > div > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
@@ -4005,7 +4005,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .storelocatorContainer > div:first-of-type{padding: 40px 3% 0; box-sizing: border-box;}
     .storelocatorContainer > div:first-of-type{width: 100%;}
     .storelocatorContainer > div:first-of-type h2{
-        font-size: 47px; font-weight: 400; color: #333333; margin-bottom: 30px;
+        font-size: 47px; font-weight: 500; color: #333333; margin-bottom: 30px;
     }
     .storelocatorContainer > div:first-of-type > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
@@ -5610,7 +5610,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap::after{content: ''; display: block; clear: both;}
     .assistanceContainer > .assistancewrap .mainContents{float: left; width: 77.3%;}
     .assistanceContainer > .assistancewrap .mainContents h2{
-        font-size: 47px; font-weight: 400; color: #333333; margin-bottom: 30px;
+        font-size: 47px; font-weight: 500; color: #333333; margin-bottom: 30px;
     }
     .assistanceContainer > .assistancewrap .mainContents > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
@@ -5695,12 +5695,12 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
     .assistanceContainer > .assistancewrap .subMenu{float: right; width: 16.5%; margin-top: 210px;}
     .assistanceContainer > .assistancewrap .subMenu ul li{
-        width: 100%; background-color: #ffffff; box-sizing: border-box; padding: 0 25px; text-align: left;
+        width: 100%; height: 40px; background-color: #ffffff; box-sizing: border-box; padding: 0 25px; text-align: left;  overflow: hidden;
     }
     .assistanceContainer > .assistancewrap .subMenu ul li:not(:last-of-type){margin-bottom: 15px;}
     .assistanceContainer > .assistancewrap .subMenu ul li a{
-        display: block; line-height: 40px; font-size: 12px; font-weight: 500; color: #000000; padding-left: 25px;
-        background: left center / 16px no-repeat transparent; 
+        display: block; position: relative; line-height: 40px; font-size: 12px; font-weight: 500; color: #000000; padding-left: 25px;
+        background: left center / 16px no-repeat transparent;
     }
     .assistanceContainer > .assistancewrap .subMenu ul li:first-of-type a{background-image: url(../images/footer_assistance_help_icon.png);}
     .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(2) a{background-image: url(../images/footer_assistance_delivery_icon.png);}
@@ -5710,10 +5710,43 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(6) a{background-image: url(../images/footer_assistance_cookies_icon.png);}
     .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(7) a{background-image: url(../images/footer_assistance_giftcard_icon.png);}
     .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(8) a{background-image: url(../images/footer_assistance_terms_icon.png);}
-    .assistanceContainer > .assistancewrap .subMenu ul li.active{background-color: #000000;}
+    .assistanceContainer > .assistancewrap .subMenu ul li.active{pointer-events: none; background-color: #000000;}
+    .assistanceContainer > .assistancewrap .subMenu ul li.active a{
+        padding-left: 15%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(113deg) brightness(104%) contrast(107%);
+    }
+    .assistanceContainer > .assistancewrap .subMenu ul li::after{
+        height: 0; 
+    }
+    .assistanceContainer > .assistancewrap .subMenu ul li:hover::after{
+        background-color: #000000;
+        transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
+/* 
+    .assistanceContainer > .assistancewrap .subMenu ul li:hover a{
+        padding-left: 15%;
+        transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
+    .assistanceContainer > .assistancewrap .subMenu ul li a::before{
+        content: ''; display: block; position: absolute; top: 30%; opacity: 0; left: -5%; width: 15px; height: 15px;
+        transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
+    .assistanceContainer > .assistancewrap .subMenu ul li:hover a::before{
+        opacity: 1; left: 0%;
+    }
+    .assistanceContainer > .assistancewrap .subMenu ul li:first-of-type a::before{ background: url(../images/footer_assistance_help_icon.png) left center / contain no-repeat;}
+    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(2) a::before{background: url(../images/footer_assistance_delivery_icon.png) left center / contain no-repeat;}
+    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(3) a::before{background: url(../images/footer_assistance_privacy_icon.png) left center / contain no-repeat;}
+    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(4) a::before{background: url(../images/footer_assistance_faq_icon.png) left center / contain no-repeat;}
+    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(5) a::before{background: url(../images/footer_assistance_returns_icon.png) left center / contain no-repeat;}
+    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(6) a::before{background: url(../images/footer_assistance_cookies_icon.png) left center / contain no-repeat;}
+    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(7) a::before{background: url(../images/footer_assistance_giftcard_icon.png) left center / contain no-repeat;}
+    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(8) a::before{background: url(../images/footer_assistance_terms_icon.png) left center / contain no-repeat;}
+    
+     .assistanceContainer > .assistancewrap .subMenu ul li.active{background-color: #000000;}
     .assistanceContainer > .assistancewrap .subMenu ul li.active a{
        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(113deg) brightness(104%) contrast(107%);
-    }
+    } */
 
 
 
@@ -5761,7 +5794,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .aboutContainer > .aboutWrap::after{content: ''; display: block; clear: both;}
     .aboutContainer > .aboutWrap > div{float: left; width: 77.3%;}
     .aboutContainer > .aboutWrap > div > h2{
-        font-size: 47px; font-weight: 400; color: #333333; margin-bottom: 30px;
+        font-size: 47px; font-weight: 500; color: #333333; margin-bottom: 30px;
     }
     .aboutContainer > .aboutWrap > div > p{
         font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
@@ -5953,7 +5986,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .storelocatorContainer > div:first-of-type{max-width: 1250px; padding-top: 40px; margin: 0 auto;}
     .storelocatorContainer > div:first-of-type{width: 78.4%;}
     .storelocatorContainer > div:first-of-type h2{
-        width: 78%; font-size: 47px; font-weight: 400; color: #333333; margin-bottom: 30px;
+        width: 78%; font-size: 47px; font-weight: 500; color: #333333; margin-bottom: 30px;
     }
     .storelocatorContainer > div:first-of-type > p{
         width: 78%; font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
