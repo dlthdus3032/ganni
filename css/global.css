@@ -292,6 +292,7 @@ footer > div .newsletter input[type="email"] ,
 .contactusContainer .mainContents > div > form > fieldset > input ,
 .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div address ,
 .storelocatorContainer > div:first-of-type > .storeMenu input[type='search'] ,
+#signInPanel > #forgotPassword .passwordSend input[type='email'],
 option ,
 select
 {font-family: 'Poppins', sans-serif;}
@@ -599,15 +600,8 @@ img{width: 100%;
     #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a{
         display: inline-block; position: relative; font-size: 11px; font-weight: 500; color: #6c6c6c; margin-top: 25px;
     }
-    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a:hover{
+    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a:active{
         color: #000000;
-    }
-    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a::after{
-        content: ''; display: block; position: absolute; top: 70%; left: 0; width: 0; height: 1px; margin-top: 5px; background-color: #000000;
-        transition: width 0.25s ease-in-out;
-    }
-    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a:hover::after{
-        width: 100%;
     }
     
 
@@ -936,7 +930,7 @@ img{width: 100%;
         background: url('../images/footer_question_mark.png') center / contain no-repeat transparent;
         transition: all 0.4s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    footer > div .newsletter h3 input[value="question mark"]:hover{
+    footer > div .newsletter h3 input[value="question mark"].active{
         background: url('../images/footer_question_mark_hover.png') center / contain no-repeat transparent;
 
     }
@@ -1191,15 +1185,8 @@ img{width: 100%;
     #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a{
         display: inline-block; position: relative; font-size: 11px; font-weight: 500; color: #6c6c6c; margin-top: 25px;
     }
-    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a:hover{
+    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a:active{
         color: #000000;
-    }
-    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a::after{
-        content: ''; display: block; position: absolute; top: 70%; left: 0; width: 0; height: 1px; margin-top: 5px; background-color: #000000;
-        transition: width 0.25s ease-in-out;
-    }
-    #searchPanel > div:nth-of-type(2) > div:nth-of-type(2) ul li a:hover::after{
-        width: 100%;
     }
 
     /* sign in - panel*/
@@ -1530,7 +1517,7 @@ img{width: 100%;
         background: url('../images/footer_question_mark.png') center / contain no-repeat transparent;
         transition: all 0.4s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    footer > div .newsletter h3 input[value="question mark"]:hover{
+    footer > div .newsletter h3 input[value="question mark"].active{
         background: url('../images/footer_question_mark_hover.png') center / contain no-repeat transparent;
 
     }

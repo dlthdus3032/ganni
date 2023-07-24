@@ -44,13 +44,13 @@ $(function(){
     tabBtn();
     topBtn();
     popup("#signInPanel > div:nth-of-type(2) h3 input[type='button']");
-    popupTest("#signInPanel > #forgotPassword .passwordSend input[value='SEND']");
-    popup("input[data-popup=questionComment]" , "#questionComment");
+    popup("#signInPanel > #forgotPassword .passwordSend input[value='SEND']");
+    popup("input[data-popup=questionComment]");
     accountPopup(".mydetailsContainer .accountMain > div > #detailModify > form > input[type='button']","#detailModify");
-    accountPopup(".myaddressContainer .accountMain > div > #addAddress > form > input[type='button']","#addAddress" , ".myaddressContainer .accountMain > div > #addressApply > input[type='button']");
+    accountPopup(".myaddressContainer .accountMain > div > #addAddress > form > input[type='button']","#addAddress" , ".myaddressContainer .accountMain > div > #addressApply > input[type='button']" , "addressApply");
     accountPopup(".trackingContainer .accountMain > div > #trackingModify form input[type='button']","#trackingModify");
     accountPopup(".paymentContainer .accountMain > div > #addPayment form input[type='button']","#addPayment" , ".paymentContainer .accountMain > div > #savePayment > input[type='button']");
-    // slideToggle();
+
 });
 
 
@@ -111,9 +111,21 @@ function headerSlide(){
 
 // function slideToggle(){
 //     $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").click(function(){
-//         $(this).next('div').slideToggle();
-//         if($(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4"))
+//         $(this).next().slideToggle(500);
+//         $(this).toggleClass('special');
+
 //     });
+//     // $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").click(function(){
+//     //     if($(this).hasClass("active")){
+//     //         slideUp(3000);
+//     //     } else{
+//     //         slideUp();
+//     //         $(this).addClass("active").next().slideDown();
+//     //     }
+//     //     function slideUp(){
+//     //         $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").removeClass("active").next().slideUp();
+//     //     };
+//     // });
 // }
 
 
@@ -132,19 +144,10 @@ function panelControl(btn){
 
 function justToggle(target){
     $(target).click(function(){
-        $(this).toggleClass("active");
+        $(this).toggleClass("active" , "slow");
     });
 }
 
-
-
-// function headerScroll(){
-//     if($(window).scrollTop() == 0){
-//         $("header").removeClass("active");
-//     }else{
-//         $("header").addClass("active");
-//     }
-// }
 
 
 function modalPopup(a,b){
@@ -206,22 +209,21 @@ function topBtn(){
 
 }
 
-function popup(btn){
-    var popup = null;
-    $(btn).click(function(){
-        popup= "#" + $(this).attr("data-popup");
-        $(popup).toggleClass("active");
-    });
-}
 
-function popupTest(btn){
+function popup(btn){
     var popup = null;
     $(btn).click(function(){
         popup= "#" + $(this).attr("data-popup");
         $(popup).siblings(".passwordSend").css("display","none");
         $(popup).toggleClass("active");
+        if($(popup).hasClass("active")) {
+            $(btn).addClass("active");
+        } else {
+            $(btn).removeClass("active");
+        }
     });
 }
+
 function accountPopup(a,b,c){
     var popup = null;
     $(a).click(function(){
@@ -234,6 +236,8 @@ function accountPopup(a,b,c){
         $(b).addClass("active");
     });
 }
+
+
 
 
 

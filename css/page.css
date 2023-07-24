@@ -242,9 +242,8 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .mainContainer .imageButton li div h2{font-size: 16px; color: #fff;}
     .mainContainer .imageButton li div a{
         margin-top: 15px; display: inline-block; font-size: 12px; color: #fff; border: 3px solid #fff; border-radius: 6px; padding: 0 15px; line-height: 30px;
-        transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-    .mainContainer .imageButton li:hover div a{
+    .mainContainer .imageButton li:active div a{
         border: 3px solid #000000; background-color: #fff; color: #000000;
     }
     .mainContainer .imageButton li:nth-of-type(3){
@@ -261,7 +260,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .mainContainer .imageButton li:nth-of-type(4) div a{
         line-height: 15px; padding: 0 15px; line-height: 30px;
     }
-    .mainContainer .imageButton li:nth-of-type(n+3):hover a{border: 3px solid #000000; background-color: #fff; color: #000000;}
+    .mainContainer .imageButton li:nth-of-type(n+3):active a{border: 3px solid #000000; background-color: #fff; color: #000000;}
     .mainContainer > div{padding: 35px 0 45px 0;}
     .mainContainer > div h2{padding: 0 0 35px 6%; font-size: 28px; font-weight: 500; color: #000000;}
 
@@ -283,9 +282,8 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .main_slider li fieldset input[type="button"]{
         float: right; width: 47.72%; line-height: 35px; padding: 0; border-radius: 5px; border: 2px solid #c4c4c4; background-color: #fff; box-sizing: border-box; cursor: pointer;
         font-size: 11PX; font-weight: 800; color: #c4c4c4; cursor: pointer;
-        transition: all 0.3s ease;
     }
-    .main_slider li fieldset input[type="button"]:hover{
+    .main_slider li fieldset input[type="button"]:active{
         border: 2px solid #000000; color: #000000;
     }
 
@@ -324,11 +322,11 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; text-indent: -9999px; padding: 0; width: 11px; height: 11px; border-radius: 3px;
     }
     .listNewinContainer > ul > li .sizeButton{display: none; position: absolute; right: 4.1%; bottom: 4px; line-height: 11px;}
-    .listNewinContainer > ul > li:hover .sizeButton{display: block;}
-    .listNewinContainer > ul > li:hover .sizeButton::after{content: ''; display: block; clear: both;}
-    .listNewinContainer > ul > li:hover .sizeButton li{float: left;}
-    .listNewinContainer > ul > li:hover .sizeButton li:not(:first-of-type){margin-left: 5px;}
-    .listNewinContainer > ul > li:hover .sizeButton a{font-size: 11px; font-weight: 400; color: #424242;}
+    .listNewinContainer > ul > li:active .sizeButton{display: block;}
+    .listNewinContainer > ul > li:active .sizeButton::after{content: ''; display: block; clear: both;}
+    .listNewinContainer > ul > li:active .sizeButton li{float: left;}
+    .listNewinContainer > ul > li:active .sizeButton li:not(:first-of-type){margin-left: 5px;}
+    .listNewinContainer > ul > li:active .sizeButton a{font-size: 11px; font-weight: 400; color: #424242;}
     .listNewinContainer > .textWrap p{
         font-size: 8px; font-weight: 400; line-height: 14px; text-align: center; padding: 30px 0 40px 0; margin: 0 6%;
     }
@@ -337,14 +335,6 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listNewinContainer .topBtn button{
         display: block; position: fixed; z-index: 5; bottom: 80px; right: 3%; width: 35px; height: 35px; border-radius: 6px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
-    }
-    .listNewinContainer .topBtn button:hover{
-        height: 130px; border-radius: 6px; text-indent: 0;
-        background: #fff url(../images/listpage_top_button.png) center top 15% / 16px no-repeat;
-    }
-    .listNewinContainer .topBtn button span{display: none;}
-    .listNewinContainer .topBtn button:hover > span{
-        display: inline-block; font-size: 12px; font-weight: 600; color: #000000; writing-mode: vertical-rl; padding-top: 18px; margin: 0px;
     }
 
 
@@ -382,11 +372,11 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; text-indent: -9999px; padding: 0; width: 11px; height: 11px; border-radius: 3px;
     }
     .listContainer > ul > li .sizeButton{display: none; position: absolute; right: 4.1%; bottom: 4px; line-height: 11px;}
-    .listContainer > ul > li:hover .sizeButton{display: block;}
-    .listContainer > ul > li:hover .sizeButton::after{content: ''; display: block; clear: both;}
-    .listContainer > ul > li:hover .sizeButton li{float: left;}
-    .listContainer > ul > li:hover .sizeButton li:not(:first-of-type){margin-left: 5px;}
-    .listContainer > ul > li:hover .sizeButton li a{font-size: 11px; font-weight: 400; color: #424242;}
+    .listContainer > ul > li:active .sizeButton{display: block;}
+    .listContainer > ul > li:active .sizeButton::after{content: ''; display: block; clear: both;}
+    .listContainer > ul > li:active .sizeButton li{float: left;}
+    .listContainer > ul > li:active .sizeButton li:not(:first-of-type){margin-left: 5px;}
+    .listContainer > ul > li:active .sizeButton li a{font-size: 11px; font-weight: 400; color: #424242;}
     .listContainer > .textWrap p{
         font-size: 8px; font-weight: 400; line-height: 14px; text-align: center; padding: 30px 0 40px 0; margin: 0 6%;
     }
@@ -397,14 +387,6 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listContainer .topBtn button{
         display: block; position: fixed; z-index: 5; bottom: 80px; right: 3%; width: 35px; height: 35px; border-radius: 6px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
-    }
-    .listContainer .topBtn button:hover{
-        height: 130px; border-radius: 8px; text-indent: 0;
-        background: #fff url(../images/listpage_top_button.png) center top 15% / 16px no-repeat;
-    }
-    .listContainer .topBtn button span{display: none;}
-    .listContainer .topBtn button:hover > span{
-        display: inline-block; font-size: 12px; font-weight: 600; color: #000000; writing-mode: vertical-rl; padding-top: 18px; margin: 0px;
     }
 
 
@@ -993,7 +975,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         font-size: 11PX; font-weight: 800; color: #c4c4c4; cursor: pointer;
         transition: all 0.3s ease;
     }
-    .tryProductSlider li fieldset input[type="button"]:hover{
+    .tryProductSlider li fieldset input[type="button"]:active{
         border: 2px solid #000000; color: #000000;
     }
 
@@ -1038,7 +1020,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         background: url(../images/signup_question_mark.png) center / contain no-repeat;
         transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
     } 
-    .signupcontainer > div > form > fieldset > input[type='button']:hover{
+    .signupcontainer > div > form > fieldset > input[type='button']:active{
         background: url(../images/signup_question_mark_hover.png) center / contain no-repeat;
     }
     .signupcontainer > div > form > fieldset:nth-of-type(2){padding: 35px 0 40px 0;}
@@ -1076,11 +1058,11 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         margin-right: 10px; border: 1px solid #626262; background: #626262 url(../images/myaccount_check_icon.png) center / 12px no-repeat; box-sizing: border-box;
     }
 
-
+    
     /* my page */
     .myAccountContainer{padding: 75px 6% 30px;}
     .accountMain{margin: 15px 0 60px;}
-    .accountMain h2{font-size: 38px; font-weight: 400; color: #333333; margin-bottom: 20px;}
+    .accountMain h2{font-size: 47px; font-weight: 500; color: #333333; margin: 40px 0 30px;}
     .accountMain > div:first-of-type::after{content: ''; display: block; clear: both;}
     .accountMain > div:first-of-type{
         padding-bottom: 20px; border-bottom: 1px solid #c4c4c4;
@@ -1092,12 +1074,17 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .accountMain > div > span > a{font-size: 14px; font-weight: 400; color: #828282; text-decoration: underline;}
     .accountMain > div > a{float: right; font-size: 14px; font-weight: 400; color: #828282; text-decoration: underline;}
     .myAccountContainer > .accountMain > div{width: 100%;}
-    .myAccountContainer > .accountMain > div > ul{width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px 0; margin: 0 auto 60px;}
-    .myAccountContainer > .accountMain > div > ul li{width: 47%; border: 1px solid #444444; border-radius: 15px;}
-    .myAccountContainer > .accountMain > div > ul li a{display: block; padding: 30px 6%;}
-    .myAccountContainer > .accountMain > div > ul li a h3{font-size: 21px; font-weight: 400; color: #333333; margin-bottom: 10px;}
-    .myAccountContainer > .accountMain > div > ul li a span{display: block; font-size: 12px; font-weight: 400; line-height: 15px; color: #828282;}
-    
+    .myAccountContainer > .accountMain > div > ul{width: 100%; margin: 0 auto 60px;}
+    .myAccountContainer > .accountMain > div > ul li{width: 100%; border: 1px solid #444444; border-radius: 15px;}
+    .myAccountContainer > .accountMain > div > ul li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .myAccountContainer > .accountMain > div > ul li a{display: block; margin: 35px 8%;}
+    .myAccountContainer > .accountMain > div > ul li a h3{font-size: 30px; font-weight: 400; color: #333333; margin-bottom: 15px;}
+    .myAccountContainer > .accountMain > div > ul li a span{font-size: 14px; font-weight: 400; color: #828282;}
+    .myAccountContainer > .accountMain > div > ul li:active{background-color: #000000;}
+    .myAccountContainer > .accountMain > div > ul li:active a h3{color: #ffffff;}
+    .myAccountContainer > .accountMain > div > ul li:active a span{color: #ffffff;}
     
 
 
@@ -1112,7 +1099,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         background-color: #000000; font-size: 12px; font-weight: 600; color: #fff; cursor: pointer;
         transition: all 0.4s ease;
     }
-    .asideArea > div input[type='button']:hover{border: 2px solid #000000; background-color: #fff; color: #000000;}
+    .asideArea > div input[type='button']:active{border: 2px solid #000000; background-color: #fff; color: #000000;}
     .asideArea > div span{display: block; font-size: 12px; font-weight: 400; color: #828282;}
     .asideArea > div span:not(:last-of-type){margin-bottom: 10px;}
     .asideArea > div a{display: block; font-size: 12px; font-weight: 500; color: #414141; margin-bottom: 10px;}
@@ -1153,7 +1140,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
     .mydetailsContainer .accountMain > div > #detailUpdate{display: none;}
     .mydetailsContainer .accountMain > div > #detailUpdate.active{display: block;}
-    .mydetailsContainer .accountMain > div > #detailUpdate{font-size: 18px; font-weight: 400; color: #828282;}
+    .mydetailsContainer .accountMain > div > #detailUpdate{font-size: 15px; font-weight: 400; color: #828282;}
 
     /* checkbox */
     .mydetailsContainer input[type='checkbox']{display: none;}
@@ -1630,7 +1617,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         background-color: #000000; font-size: 12px; font-weight: 600; color: #fff; cursor: pointer;
         transition: all 0.4s ease;
     }
-    .checkoutAside > div:first-of-type input[type='button']:hover{border: 2px solid #000000; background-color: #fff; color: #000000;}
+    .checkoutAside > div:first-of-type input[type='button']:active{border: 2px solid #000000; background-color: #fff; color: #000000;}
     .checkoutAside > div:nth-of-type(2) h4{font-size: 20px; font-weight: 400; color: #6c6c6c;}
     .checkoutAside > div:nth-of-type(2) ul li{padding: 15px 0 25px 0; border-bottom: 1px solid #c4c4c4;}
     .checkoutAside > div:nth-of-type(2) ul li::after{content: ''; display: block; clear: both;}
@@ -2183,7 +2170,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .mainContainer .imageButton li:nth-of-type(-n+2) div a{
         margin-top: 25px; 
     }
-    .mainContainer .imageButton li:hover div a{border: 3px solid #000000; background-color: #fff; color: #000000;}
+    .mainContainer .imageButton li:active div a{border: 3px solid #000000; background-color: #fff; color: #000000;}
     .mainContainer .imageButton::after{content: ''; display: block; clear: both;}
     .mainContainer .imageButton li:nth-of-type(3){ width: 49.48%;  float: left;}
     .mainContainer .imageButton li:nth-of-type(4){ width: 49.48%;  float: right;}
@@ -2191,7 +2178,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         position: absolute; left: 50%; bottom: 25px; transform: translate(-50%, 0); display: inline-block; font-size: 13px; color: #fff; border: 3px solid #fff; border-radius: 6px; padding: 0 15px; line-height: 30px;
         transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-    .mainContainer .imageButton li:nth-of-type(n+3):hover a{border: 3px solid #000000; background-color: #fff; color: #000000;}
+    .mainContainer .imageButton li:nth-of-type(n+3):active a{border: 3px solid #000000; background-color: #fff; color: #000000;}
     .mainContainer > div{padding: 55px 0 45px 0;}
     .mainContainer > div h2{padding: 0 0 35px 5.73%; font-size: 30px; font-weight: 500; color: #000000;}
 
@@ -2215,7 +2202,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         font-size: 11PX; font-weight: 800; color: #c4c4c4; cursor: pointer;
         transition: all 0.3s ease;
     }
-    .main_slider li fieldset input[type="button"]:hover{
+    .main_slider li fieldset input[type="button"]:active{
         border: 2px solid #000000; color: #000000;
     }
 
@@ -2271,14 +2258,6 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; position: fixed; z-index: 9999; bottom: 100px; right: 3%; width: 45px; height: 45px; border-radius: 8px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
     }
-    .listNewinContainer .topBtn button:hover{
-        height: 140px; border-radius: 8px; text-indent: 0;
-        background: #fff url(../images/listpage_top_button.png) center top 15% / 16px no-repeat;
-    }
-    .listNewinContainer .topBtn button span{display: none;}
-    .listNewinContainer .topBtn button:hover > span{
-        display: inline-block; font-size: 12px; font-weight: 600; color: #000000; writing-mode: vertical-rl; padding-top: 15px; margin: 0px;
-    }
 
 
 
@@ -2331,14 +2310,6 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listContainer .topBtn button{
         display: block; position: fixed; z-index: 9999; bottom: 100px; right: 3%; width: 45px; height: 45px; border-radius: 8px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
-    }
-    .listContainer .topBtn button:hover{
-        height: 140px; border-radius: 8px; text-indent: 0;
-        background: #fff url(../images/listpage_top_button.png) center top 15% / 16px no-repeat;
-    }
-    .listContainer .topBtn button span{display: none;}
-    .listContainer .topBtn button:hover > span{
-        display: inline-block; font-size: 12px; font-weight: 600; color: #000000; writing-mode: vertical-rl; padding-top: 15px; margin: 0px;
     }
 
     /* list new in - filter panel*/
@@ -3020,7 +2991,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     /* my page */
     .myAccountContainer{margin: 0 auto; padding: 90px 3% 0;}
     .accountMain{width: 100%;}
-    .accountMain h2{font-size: 47px; font-weight: 400; color: #333333; margin: 40px 0 30px 0;}
+    .accountMain h2{font-size: 47px; font-weight: 500; color: #333333; margin: 40px 0 30px 0;}
     .accountMain > div > span{display: block; font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;}
     .accountMain > div > span a{font-size: 14px; font-weight: 400; color: #828282; text-decoration: underline;}
     .myAccountContainer > .accountMain > div:nth-of-type(2){padding: 40px 0 0 0; width: 100%;}
@@ -3029,6 +3000,10 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .myAccountContainer > .accountMain > div > ul li a{display: block; margin: 45px 10%;}
     .myAccountContainer > .accountMain > div > ul li a h3{font-size: 32px; font-weight: 400; color: #333333; margin-bottom: 15px;}
     .myAccountContainer > .accountMain > div > ul li a span{font-size: 14px; font-weight: 400; color: #828282;}
+    .myAccountContainer > .accountMain > div > ul li:active{width: 47%;background-color: #000000;  border-radius: 15px;}
+    .myAccountContainer > .accountMain > div > ul li:active a{display: block; margin: 45px 10%;}
+    .myAccountContainer > .accountMain > div > ul li:active a h3{font-size: 32px; font-weight: 400; color: #ffffff; margin-bottom: 15px;}
+    .myAccountContainer > .accountMain > div > ul li:active a span{font-size: 14px; font-weight: 400; color: #ffffff;}
     
     
 
@@ -3117,7 +3092,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .myaddressContainer .accountMain > div > #addAddress{display: none;}
     .myaddressContainer .accountMain > div > #addAddress.active{display: block;}
     .myaddressContainer .accountMain > div > #addAddress > form > fieldset{border-bottom: 1px solid #c4c4c4;}
-    .myaddressContainer .accountMain > div > #addAddress h3{font-size: 32px; font-weight: 400; color: #333333; padding-bottom: 30px;}
+    .myaddressContainer .accountMain > div > #addAddress h3{font-size: 32px; font-weight: 500; color: #333333; padding-bottom: 30px;}
     .myaddressContainer .accountMain > div > #addAddress > form > fieldset > label{display: block; font-size: 14px; font-weight: 400; color: #828282; padding-bottom: 5px;}
     .myaddressContainer .accountMain > div > #addAddress > form > fieldset > input{padding: 0 0 0 15px; box-sizing: border-box; width: 100%; height: 40px; border: 1px solid #c4c4c4; border-radius: 8px; margin-bottom: 25px;}
     .myaddressContainer .accountMain > div > #addAddress > form > fieldset > #country_select{
@@ -3801,6 +3776,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; width: 38.7%; margin: 30px auto 0; height: 50px; font-size: 14px; font-weight: 600;
     }
     .contactusContainer .mainContents > div > form > fieldset #messageSent{display: none;}
+    .contactusContainer .mainContents > div > form > fieldset #messageSent.active{display: block}
     .contactusContainer .mainContents > div > form > fieldset #messageSent p{
         margin-bottom: 25px; font-size: 14px; font-weight: 400; color: #444444;
     }
@@ -4910,7 +4886,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .myAccountContainer{max-width: 1700px; width: 88.54%; margin: 0 auto; padding-top: 90px;}
     .myAccountContainer::after{content: ''; display: block; clear: both;}
     .accountMain{width: 79.4%; float: left;}
-    .accountMain h2{font-size: 47px; font-weight: 400; color: #333333; margin: 40px 0 30px 0;}
+    .accountMain h2{font-size: 47px; font-weight: 500; color: #333333; margin: 40px 0 30px 0;}
     .accountMain > div:first-of-type{
         padding-bottom: 30px; border-bottom: 1px solid #c4c4c4;
     }
@@ -4920,10 +4896,17 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .accountMain > div > span a{font-size: 14px; font-weight: 400; color: #828282; text-decoration: underline;}
     .myAccountContainer > .accountMain > div:nth-of-type(2){padding: 40px 0 0 0; width: 100%;}
     .myAccountContainer > .accountMain > div > ul{width: 70%; display: flex; flex-wrap: wrap;  gap: 45px 5.3%; margin: 0 auto 200px;}
-    .myAccountContainer > .accountMain > div > ul li{width: 47%; border: 1px solid #444444; border-radius: 15px;}
+    .myAccountContainer > .accountMain > div > ul li{
+        width: 47%; border: 1px solid #444444; border-radius: 15px;
+        transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
     .myAccountContainer > .accountMain > div > ul li a{display: block; margin: 45px 10%;}
     .myAccountContainer > .accountMain > div > ul li a h3{font-size: 32px; font-weight: 400; color: #333333; margin-bottom: 15px;}
     .myAccountContainer > .accountMain > div > ul li a span{font-size: 14px; font-weight: 400; color: #828282;}
+    .myAccountContainer > .accountMain > div > ul li:hover{width: 47%;background-color: #000000;  border-radius: 15px;}
+    .myAccountContainer > .accountMain > div > ul li:hover a{display: block; margin: 45px 10%;}
+    .myAccountContainer > .accountMain > div > ul li:hover a h3{font-size: 32px; font-weight: 400; color: #ffffff; margin-bottom: 15px;}
+    .myAccountContainer > .accountMain > div > ul li:hover a span{font-size: 14px; font-weight: 400; color: #ffffff;}
     
 
 
@@ -5653,8 +5636,8 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transition: all 0.4s ease;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li div{display: none;}
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{display: block;}
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{padding-bottom: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{display: block; }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{padding-bottom: 25px; }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p{
         font-size: 13px; font-weight: 400; color: #626262; line-height: 18px;
     }
@@ -5722,32 +5705,6 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         background-color: #000000;
         transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-/* 
-    .assistanceContainer > .assistancewrap .subMenu ul li:hover a{
-        padding-left: 15%;
-        transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
-    }
-    .assistanceContainer > .assistancewrap .subMenu ul li a::before{
-        content: ''; display: block; position: absolute; top: 30%; opacity: 0; left: -5%; width: 15px; height: 15px;
-        transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
-    }
-    .assistanceContainer > .assistancewrap .subMenu ul li:hover a::before{
-        opacity: 1; left: 0%;
-    }
-    .assistanceContainer > .assistancewrap .subMenu ul li:first-of-type a::before{ background: url(../images/footer_assistance_help_icon.png) left center / contain no-repeat;}
-    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(2) a::before{background: url(../images/footer_assistance_delivery_icon.png) left center / contain no-repeat;}
-    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(3) a::before{background: url(../images/footer_assistance_privacy_icon.png) left center / contain no-repeat;}
-    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(4) a::before{background: url(../images/footer_assistance_faq_icon.png) left center / contain no-repeat;}
-    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(5) a::before{background: url(../images/footer_assistance_returns_icon.png) left center / contain no-repeat;}
-    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(6) a::before{background: url(../images/footer_assistance_cookies_icon.png) left center / contain no-repeat;}
-    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(7) a::before{background: url(../images/footer_assistance_giftcard_icon.png) left center / contain no-repeat;}
-    .assistanceContainer > .assistancewrap .subMenu ul li:nth-of-type(8) a::before{background: url(../images/footer_assistance_terms_icon.png) left center / contain no-repeat;}
-    
-     .assistanceContainer > .assistancewrap .subMenu ul li.active{background-color: #000000;}
-    .assistanceContainer > .assistancewrap .subMenu ul li.active a{
-       filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(113deg) brightness(104%) contrast(107%);
-    } */
-
 
 
     /* footer - contact */
