@@ -50,6 +50,7 @@ $(function(){
     accountPopup(".myaddressContainer .accountMain > div > #addAddress > form > input[type='button']","#addAddress" , ".myaddressContainer .accountMain > div > #addressApply > input[type='button']" , "addressApply");
     accountPopup(".trackingContainer .accountMain > div > #trackingModify form input[type='button']","#trackingModify");
     accountPopup(".paymentContainer .accountMain > div > #addPayment form input[type='button']","#addPayment" , ".paymentContainer .accountMain > div > #savePayment > input[type='button']");
+    accountPopup(".contactusContainer .mainContents > div > form input[type='button']");
 
 });
 
@@ -142,10 +143,12 @@ function panelControl(btn){
     });
 }
 
-function justToggle(target){
-    $(target).click(function(){
-        $(this).toggleClass("active" , "slow");
-    });
+function justToggle(a,b){
+    $(a).click(function(){
+        $(this).toggleClass("active");
+        if($(this).hasClass("active"))
+        $(b).not(this).removeClass("active");
+  })
 }
 
 

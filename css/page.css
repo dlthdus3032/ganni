@@ -321,12 +321,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listNewinContainer > ul > li .colorButton li input[type='button']{
         display: block; text-indent: -9999px; padding: 0; width: 11px; height: 11px; border-radius: 3px;
     }
-    .listNewinContainer > ul > li .sizeButton{display: none; position: absolute; right: 4.1%; bottom: 4px; line-height: 11px;}
-    .listNewinContainer > ul > li:active .sizeButton{display: block;}
-    .listNewinContainer > ul > li:active .sizeButton::after{content: ''; display: block; clear: both;}
-    .listNewinContainer > ul > li:active .sizeButton li{float: left;}
-    .listNewinContainer > ul > li:active .sizeButton li:not(:first-of-type){margin-left: 5px;}
-    .listNewinContainer > ul > li:active .sizeButton a{font-size: 11px; font-weight: 400; color: #424242;}
+    .listNewinContainer > ul > li .sizeButton{display: none;}
     .listNewinContainer > .textWrap p{
         font-size: 8px; font-weight: 400; line-height: 14px; text-align: center; padding: 30px 0 40px 0; margin: 0 6%;
     }
@@ -336,6 +331,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; position: fixed; z-index: 5; bottom: 80px; right: 3%; width: 35px; height: 35px; border-radius: 6px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
     }
+    .listNewinContainer .topBtn button > span{display: none;}
 
 
 
@@ -371,12 +367,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listContainer > ul > li .colorButton li input[type='button']{
         display: block; text-indent: -9999px; padding: 0; width: 11px; height: 11px; border-radius: 3px;
     }
-    .listContainer > ul > li .sizeButton{display: none; position: absolute; right: 4.1%; bottom: 4px; line-height: 11px;}
-    .listContainer > ul > li:active .sizeButton{display: block;}
-    .listContainer > ul > li:active .sizeButton::after{content: ''; display: block; clear: both;}
-    .listContainer > ul > li:active .sizeButton li{float: left;}
-    .listContainer > ul > li:active .sizeButton li:not(:first-of-type){margin-left: 5px;}
-    .listContainer > ul > li:active .sizeButton li a{font-size: 11px; font-weight: 400; color: #424242;}
+    .listContainer > ul > li .sizeButton{display: none;}
     .listContainer > .textWrap p{
         font-size: 8px; font-weight: 400; line-height: 14px; text-align: center; padding: 30px 0 40px 0; margin: 0 6%;
     }
@@ -388,6 +379,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; position: fixed; z-index: 5; bottom: 80px; right: 3%; width: 35px; height: 35px; border-radius: 6px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
     }
+    .listContainer .topBtn button > span{display: none;}
 
 
     /* list new in - filter panel*/
@@ -941,16 +933,29 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         position: relative; vertical-align: middle; cursor: pointer; font-size: 12px; font-weight: 700; color: #333333; padding: 15px 0;
     }
     .detailContainer aside > div:last-of-type > ul > li > h3::after{
-        content: ''; display: inline-block; width: 15px; height: 15px; position: absolute; right: 0; background: url(../images/detail_expand_more_icon.png) center / contain no-repeat;}
+        content: ''; display: inline-block; width: 15px; height: 15px; position: absolute; right: 0; background: url(../images/detail_expand_more_icon.png) center / contain no-repeat;
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
     .detailContainer aside > div:last-of-type > ul > li > h3.active::after{
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > p{display: none;}
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{display: block; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;}
-    .detailContainer aside > div:last-of-type > ul > li > p:last-of-type{padding-bottom: 30px}
+    .detailContainer aside > div:last-of-type > ul > li > h3~p{
+        max-height: 0;
+    }
+    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
+        max-height: 1000px;
+        transition: all 1s;
+    }
+    .detailContainer aside > div:last-of-type > ul > li > p{
+        overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
+    .detailContainer aside > div:last-of-type > ul > li > h3.active~p:last-of-type{padding-bottom: 20px}
     .detailContainer > div:nth-of-type(2){padding: 45px 0 50px 0;}
-    .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 25px; font-weight: 600; color: #000000;}
+    .detailContainer > div h2{
+        padding: 0 0 35px 5.73%; font-size: 25px; font-weight: 600; color: #000000;
+    }
      
     .detailSlider .bx-wrapper .bx-pager.bx-default-pager a{
         display: block;
@@ -1685,6 +1690,9 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap .mainContents > div > div > p{
         font-size: 12px; font-weight: 400; color: #626262; margin-bottom: 35px;
     }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p:last-child{
+        padding-bottom: 25px;
+    }
     .assistanceContainer > .assistancewrap .mainContents > div > div ul li{
         font-size: 13px; font-weight: 400; line-height: 20px; color: #626262;
     }
@@ -1709,20 +1717,29 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4::after{
         content: ''; display: inline-block; position: absolute;  right: 4%; top: 35%; width: 15px; height: 15px; background: url(../images/footer_assistance_expand_more.png) center / contain no-repeat;
+        transition: all 0.4s ease;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active::after{
         transform: rotate(90deg);
         transition: all 0.4s ease;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li div{display: none;}
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{display: block;}
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{padding-bottom: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4 + div{
+        max-height: 0;
+    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{
+        max-height: 2000px;
+        transition: all 0.6s ease-out;
+    }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p{
         padding: 0 5%; font-size: 13px; font-weight: 400; color: #626262; line-height: 18px;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div > p:not(:nth-of-type(1)){margin-top: 25px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table{
-        margin: 30px auto 0; width: 88%; text-align: center; font-size: 11px; font-weight: 500; color: #626262;
+        margin: 30px auto 0; width: 88%; text-align: center; font-size: 11px; font-weight: 500; color: #626262; margin-bottom: 25px;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table thead{line-height: 12px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table tbody{line-height: 12px;}
@@ -1749,7 +1766,9 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div span{
         display: block; padding: 0 6%; line-height: 18px; font-size: 13px; font-weight: 400; color: #626262; margin-top: 8px;
     }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div span:last-of-type{padding-bottom: 25px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul{padding-left: 6%; margin-top: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul:last-child{padding-bottom: 25px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul li{
         line-height: 18px; font-size: 13px; font-weight: 400; color: #626262;
     }
@@ -1812,7 +1831,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .contactusContainer .mainContents > div > form > fieldset > #message{
         width: 100%; height: 130px; padding: 15px 15px; border: 1px solid #c4c4c4; border-radius: 8px; box-sizing: border-box;
     }
-    .contactusContainer .mainContents > div > form input[type='submit']{
+    .contactusContainer .mainContents > div > form input[type='button']{
         display: block; width: 90%; margin: 30px auto 0; height: 50px; font-size: 14px; font-weight: 600;
     }
     .contactusContainer .mainContents > div > form > fieldset #messageSent{display: none;}
@@ -2242,13 +2261,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listNewinContainer > ul > li .colorButton li input[type='button']{
         display: block; text-indent: -9999px; padding: 0; width: 11px; height: 11px; border-radius: 3px;
     }
-    .listNewinContainer > ul > li .sizeButton{display: none; position: absolute; right: 4.1%; bottom: 4px; line-height: 11px;}
-    .listNewinContainer > ul > li:hover .sizeButton{display: block;}
-    .listNewinContainer > ul > li:hover .sizeButton::after{content: ''; display: block; clear: both;}
-    .listNewinContainer > ul > li:hover .sizeButton li{float: left;}
-    .listNewinContainer > ul > li:hover .sizeButton li:not(:first-of-type){margin-left: 5px;}
-    .listNewinContainer > ul > li:hover .sizeButton a{font-size: 11px; font-weight: 400; color: #424242;}
-
+    .listNewinContainer > ul > li .sizeButton{display: none;}
     .listNewinContainer > .textWrap p{
         font-size: 11px; font-weight: 400; line-height: 14px; text-align: center; padding: 50px 0 40px 0; margin: 0 27.5%;
     }
@@ -2258,6 +2271,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; position: fixed; z-index: 9999; bottom: 100px; right: 3%; width: 45px; height: 45px; border-radius: 8px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
     }
+    .listNewinContainer .topBtn button > span{display: none;}
 
 
 
@@ -2293,13 +2307,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listContainer > ul > li .colorButton li input[type='button']{
         display: block; text-indent: -9999px; padding: 0; width: 11px; height: 11px; border-radius: 3px;
     }
-    .listContainer > ul > li .sizeButton{display: none; position: absolute; right: 4.1%; bottom: 4px; line-height: 11px;}
-    .listContainer > ul > li:hover .sizeButton{display: block;}
-    .listContainer > ul > li:hover .sizeButton::after{content: ''; display: block; clear: both;}
-    .listContainer > ul > li:hover .sizeButton li{float: left;}
-    .listContainer > ul > li:hover .sizeButton li:not(:first-of-type){margin-left: 5px;}
-    .listContainer > ul > li:hover .sizeButton li a{font-size: 11px; font-weight: 400; color: #424242;}
-
+    .listContainer > ul > li .sizeButton{display: none;}
     .listContainer > .textWrap p{
         font-size: 11px; font-weight: 400; line-height: 14px; text-align: center; padding: 50px 0 40px 0; margin: 0 27.5%;
     }
@@ -2311,6 +2319,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         display: block; position: fixed; z-index: 9999; bottom: 100px; right: 3%; width: 45px; height: 45px; border-radius: 8px; text-indent: -999px; border: 2px solid #000000; cursor: pointer;
         background: #fff url(../images/listpage_top_button.png) center / 16px no-repeat;
     }
+    .listContainer .topBtn button > span{display: none;}
 
     /* list new in - filter panel*/
     #filtersNewinPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
@@ -2873,14 +2882,25 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         position: relative; vertical-align: middle; cursor: pointer; font-size: 12px; font-weight: 700; color: #333333; padding: 15px 0;
     }
     .detailContainer aside > div:last-of-type > ul > li > h3::after{
-        content: ''; display: inline-block; width: 15px; height: 15px; position: absolute; right: 0; background: url(../images/detail_expand_more_icon.png) center / contain no-repeat;}
+        content: ''; display: inline-block; width: 15px; height: 15px; position: absolute; right: 0; background: url(../images/detail_expand_more_icon.png) center / contain no-repeat;
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
     .detailContainer aside > div:last-of-type > ul > li > h3.active::after{
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > p{display: none;}
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{display: block; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;}
-    .detailContainer aside > div:last-of-type > ul > li > p:last-of-type{padding-bottom: 30px}
+    .detailContainer aside > div:last-of-type > ul > li > h3~p{
+        max-height: 0;
+    }
+    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
+        max-height: 1000px;
+        transition: all 1s;
+    }
+    .detailContainer aside > div:last-of-type > ul > li > p{
+        overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c; 
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
+    .detailContainer aside > div:last-of-type > ul > li > h3.active~p:last-of-type{padding-bottom: 20px}
     .detailContainer > div:not(:last-of-type){padding: 45px 0 50px 0;}
     .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 25px; font-weight: 600; color: #000000;}
      
@@ -3678,20 +3698,32 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4::after{
         content: ''; display: inline-block; position: absolute;  right: 0; top: 35%; width: 15px; height: 15px; background: url(../images/footer_assistance_expand_more.png) center / contain no-repeat;
+        transition: all 0.4s ease;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active::after{
         transform: rotate(90deg);
         transition: all 0.4s ease;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li div{display: none;}
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{display: block;}
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{padding-bottom: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4 + div{
+        max-height: 0;
+    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li div{
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{
+        max-height: 800px;
+        transition: all 0.6s ease-out;
+    }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p{
         font-size: 13px; font-weight: 400; color: #626262; line-height: 18px;
     }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p:last-child{
+        padding-bottom: 25px;
+    }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div > p:not(:nth-of-type(1)){margin-top: 25px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table{
-        border: 1px solid #707070; margin: 30px auto 0; text-align: center; font-size: 13px; font-weight: 500; color: #626262;
+        border: 1px solid #707070; margin: 30px auto 0; text-align: center; font-size: 13px; font-weight: 500; color: #626262; margin-bottom: 25px;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table thead{line-height: 35px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table tbody{line-height: 40px;}
@@ -3718,7 +3750,8 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div span{
         display: block; line-height: 18px; font-size: 13px; font-weight: 400; color: #626262; margin-top: 8px;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul{padding-left: 25px;  margin-top: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div span:last-of-type{padding-bottom: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul{padding: 0 0 25px 25px;  margin-top: 25px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul li{
         line-height: 18px; font-size: 13px; font-weight: 400; color: #626262;
     }
@@ -3772,7 +3805,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .contactusContainer .mainContents > div > form > fieldset > #message{
         width: 94%; height: 130px; padding: 15px 15px; border: 1px solid #c4c4c4; border-radius: 8px; box-sizing: border-box;
     }
-    .contactusContainer .mainContents > div > form input[type='submit']{
+    .contactusContainer .mainContents > div > form input[type='button']{
         display: block; width: 38.7%; margin: 30px auto 0; height: 50px; font-size: 14px; font-weight: 600;
     }
     .contactusContainer .mainContents > div > form > fieldset #messageSent{display: none;}
@@ -4846,16 +4879,24 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
     .detailContainer aside > div:last-of-type > ul > li > h3::after{
         content: ''; display: inline-block; width: 15px; height: 15px; position: absolute; right: 0; background-image: url(../images/detail_expand_more_icon.png); background-size: 15px;
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
     .detailContainer aside > div:last-of-type > ul > li > h3.active::after{
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > p{display: none;}
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
-        display: block; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;
+    .detailContainer aside > div:last-of-type > ul > li > h3~p{
+        max-height: 0;
     }
-    .detailContainer aside > div:last-of-type > ul > li > p:last-of-type{padding-bottom: 30px}
+    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
+        max-height: 1000px;
+        transition: all 1s;
+    }
+    .detailContainer aside > div:last-of-type > ul > li > p{
+        overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c; 
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
+    .detailContainer aside > div:last-of-type > ul > li > h3.active~p:last-of-type{padding-bottom: 20px}
     .detailContainer > div:not(:last-of-type){padding: 45px 0 50px 0;}
     .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 28px; font-weight: 600; color: #000000;}
      
@@ -5630,20 +5671,32 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4::after{
         content: ''; display: inline-block; position: absolute;  right: 0; top: 35%; width: 15px; height: 15px; background: url(../images/footer_assistance_expand_more.png) center / contain no-repeat;
+        transition: all 0.4s ease;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active::after{
         transform: rotate(90deg);
         transition: all 0.4s ease;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li div{display: none;}
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{display: block; }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{padding-bottom: 25px; }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4 + div{
+        max-height: 0;
+    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{
+        max-height: 800px;
+        transition: all 0.6s ease-out;
+    }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p{
         font-size: 13px; font-weight: 400; color: #626262; line-height: 18px;
     }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p:last-child{
+        padding-bottom: 25px;
+    }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div > p:not(:nth-of-type(1)){margin-top: 25px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table{
-        border: 1px solid #707070; margin: 30px auto 0; text-align: center; font-size: 13px; font-weight: 500; color: #626262;
+        border: 1px solid #707070; margin: 30px auto 0; text-align: center; font-size: 13px; font-weight: 500; color: #626262; margin-bottom: 25px;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table thead{line-height: 35px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div table tbody{line-height: 40px;}
@@ -5670,7 +5723,8 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div span{
         display: block; line-height: 18px; font-size: 13px; font-weight: 400; color: #626262; margin-top: 8px;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul{padding-left: 25px;  margin-top: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div span:last-of-type{padding-bottom: 25px;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul{padding: 25px;  margin-top: 25px;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div ul li{
         line-height: 18px; font-size: 13px; font-weight: 400; color: #626262;
     }
@@ -5729,7 +5783,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .contactusContainer .mainContents > div > form > fieldset > #message{
         width: 71.42%; height: 130px; padding: 15px 15px; border: 1px solid #c4c4c4; border-radius: 8px; box-sizing: border-box;
     }
-    .contactusContainer .mainContents > div > form input[type='submit']{
+    .contactusContainer .mainContents > div > form input[type='buttton']{
         display: block; width: 38.7%; margin: 30px auto 0; height: 50px; font-size: 14px; font-weight: 600;
     }
     .contactusContainer .mainContents > div > form > fieldset #messageSent{display: none;}

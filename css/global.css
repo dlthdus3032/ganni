@@ -126,12 +126,14 @@ footer > div .newsletter #questionComment.active ,
 #bagHavePanel > form > div p ,
 #bagHavePanel > form > div > div > span ,
 #bagHavePanel > form > ul li > div > input[value='Remove'],
+#sizeGuidePanel > div h2 ,
 #sizeGuidePanel div table caption ,
 #sizeGuidePanel div table thead tr th,
 #sizeGuidePanel div table tbody tr td, 
 #addCartPanel > div > div > strong ,
 #addCartPanel > div > div > div strong ,
 #addCartPanel > div > div > div span ,
+#findStorePanel > div h4 ,
 #findStorePanel > div > div > strong ,
 #findStorePanel > div > div > div strong ,
 #findStorePanel > div > div > div span ,
@@ -293,6 +295,7 @@ footer > div .newsletter input[type="email"] ,
 .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div address ,
 .storelocatorContainer > div:first-of-type > .storeMenu input[type='search'] ,
 #signInPanel > #forgotPassword .passwordSend input[type='email'],
+.contactusContainer .mainContents > div > form > fieldset #messageSent p,
 option ,
 select
 {font-family: 'Poppins', sans-serif;}
@@ -318,7 +321,9 @@ select
 #addCartPanel:active > div > div > span ,
 #findStorePanel:active > div > div > span ,
 .about01Container > div:nth-of-type(2) .newinSlider li a span ,
-.checkout01Container > div > div > ul li > div > strong
+.checkout01Container > div > div > ul li > div > strong ,
+#addCartPanel > div > div > span,
+#findStorePanel > div > div:first-of-type > span
 {font-family: 'Roboto', sans-serif;}
 
 
@@ -1392,7 +1397,7 @@ img{width: 100%;
 
 
     /* detail checkout - panel */
-    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; overflow-y: auto;}
+    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
     #addCartPanel > div{padding: 0 25px;}
     #addCartPanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #addCartPanel > div:first-of-type{line-height: 55px;}
