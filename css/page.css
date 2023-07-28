@@ -4080,7 +4080,10 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 @media screen and (min-width: 1280px){
 
     /* index header  */
-    .indexHeader{background-color: transparent;}
+    .indexHeader{
+        background-color: transparent;
+        transition: all 0.2s cubic-bezier(0.34, 0.01, 0.56, 1);
+    }
     .indexHeader.active{background-color: #ffffff;}
     .indexHeader > div h1{width: 6.35%; left: 0;}
     .indexHeader > div h1 a{display: block; text-indent: -9999px; background: url(../images/logo_main.png) center / contain no-repeat;}
