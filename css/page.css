@@ -942,14 +942,15 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
     .detailContainer aside > div:last-of-type > ul > li > h3~p{
         max-height: 0;
+        transition: all 0.5s;
     }
     .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
         max-height: 1000px;
-        transition: all 1s;
+        transition: all 3s;
     }
     .detailContainer aside > div:last-of-type > ul > li > p{
         overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;
-        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+        transition: all 3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
     .detailContainer aside > div:last-of-type > ul > li > h3.active~p:last-of-type{padding-bottom: 20px}
     .detailContainer > div:nth-of-type(2){padding: 45px 0 50px 0;}
@@ -2891,16 +2892,16 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
     .detailContainer aside > div:last-of-type > ul > li > h3~p{
         max-height: 0;
+        transition: all 0.5s;
     }
     .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
         max-height: 1000px;
-        transition: all 1s;
+        transition: all 3s;
     }
     .detailContainer aside > div:last-of-type > ul > li > p{
         overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c; 
-        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+        transition: all 3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p:last-of-type{padding-bottom: 20px}
     .detailContainer > div:not(:last-of-type){padding: 45px 0 50px 0;}
     .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 25px; font-weight: 600; color: #000000;}
      
@@ -4888,18 +4889,19 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
+    
     .detailContainer aside > div:last-of-type > ul > li > h3~p{
         max-height: 0;
+        transition: all 0.5s;
     }
     .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
-        max-height: 1000px;
-        transition: all 1s;
+        max-height: 1300px;
+        transition: all 3s;
     }
     .detailContainer aside > div:last-of-type > ul > li > p{
         overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c; 
-        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
+        transition: all 3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p:last-of-type{padding-bottom: 20px}
     .detailContainer > div:not(:last-of-type){padding: 45px 0 50px 0;}
     .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 28px; font-weight: 600; color: #000000;}
      

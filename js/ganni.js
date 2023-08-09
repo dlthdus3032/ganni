@@ -51,8 +51,13 @@ $(function(){
     accountPopup(".trackingContainer .accountMain > div > #trackingModify form input[type='button']","#trackingModify");
     accountPopup(".paymentContainer .accountMain > div > #addPayment form input[type='button']","#addPayment" , ".paymentContainer .accountMain > div > #savePayment > input[type='button']");
     accountPopup(".contactusContainer .mainContents > div > form input[type='button']");
-
 });
+
+function slideToggle(a){
+    $(a).click(function(){
+        $(this).next().slideToggle(500);
+  })
+}
 
 
 function customSlider(slideName,slideSlideWidth,slideMaxSlides,slideMinSlides,slideMoveSlides,slideShrinkItems,slideSlideMargin,slideTouchEnabled){
@@ -108,7 +113,7 @@ function headerSlide(){
             }
         });
     }
-}
+} 
 
 // function slideToggle(){
 //     $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").click(function(){
@@ -150,7 +155,6 @@ function justToggle(a,b){
         $(b).not(this).removeClass("active");
   })
 }
-
 
 
 function modalPopup(a,b){
