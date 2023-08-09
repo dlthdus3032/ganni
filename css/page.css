@@ -300,7 +300,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listNewinContainer > div > div > h3{float: left; line-height: 45px;  font-size: 13px; font-weight: 600; margin: 0;}
     .listNewinContainer > div > div > input[type="button"]{
         float: right; padding: 0 0 0 30px; line-height: 45px; border: 0; border-left: 1px solid #e5e5e5; text-align: right; font-size: 13px; font-weight: 600;
-        background: url(../images/list_filter_icon.png) 13% center / 15px no-repeat;
+        background: url(../images/list_filter_icon.png) 13% center / 15px no-repeat; -webkit-appearance: none; -webkit-border-radius: 0;
     }
     .listNewinContainer > ul{max-width: 100%;}
     .listNewinContainer > ul::after{content: ''; display: block; clear: both;}
