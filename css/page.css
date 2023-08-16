@@ -2,12 +2,6 @@
 img{width: 100%;
 }
 
-[id$='Panel']{
-    display: none;
-}
-[id$='Panel'].active{
-    display: block;
-}
 [id^='tab']{
     display: none;
 }
@@ -383,7 +377,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list new in - filter panel*/
-    #filtersNewinPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 100%; height: 100%; overflow-x: auto;}
+    #filtersNewinPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersNewinPanel.active{
+        right: 0;
+    }
     #filtersNewinPanel form > div{max-width: 100%; padding: 0 6%;}
     #filtersNewinPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersNewinPanel form > div:first-of-type{line-height: 55px; position: relative;}
@@ -468,7 +468,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list shoes - filter panel*/
-    #filtersShoesPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 100%; height: 100%; overflow-x: auto;}
+    #filtersShoesPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersShoesPanel.active{
+        right: 0;
+    }
     #filtersShoesPanel form > div{max-width: 100%; padding: 0 6%;}
     #filtersShoesPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersShoesPanel form > div:first-of-type{line-height: 55px; position: relative;}
@@ -552,7 +558,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list clothing - filter panel*/
-    #filtersClothingPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 100%; height: 100%; overflow-x: auto;}
+    #filtersClothingPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersClothingPanel.active{
+        right: 0;
+    }
     #filtersClothingPanel form > div{max-width: 100%; padding: 0 6%;}
     #filtersClothingPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersClothingPanel form > div:first-of-type{line-height: 55px; position: relative;}
@@ -635,7 +647,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list dresses - filter panel*/
-    #filtersDressesPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 100%; height: 100%; overflow-x: auto;}
+    #filtersDressesPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersDressesPanel.active{
+        right: 0;
+    }
     #filtersDressesPanel form > div{max-width: 100%; padding: 0 6%;}
     #filtersDressesPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersDressesPanel form > div:first-of-type{line-height: 55px; position: relative;}
@@ -718,7 +736,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list dresses - filter panel*/
-    #filtersOuterPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 100%; height: 100%; overflow-x: auto;}
+    #filtersOuterPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersOuterPanel.active{
+        right: 0;
+    }
     #filtersOuterPanel form > div{max-width: 100%; padding: 0 6%;}
     #filtersOuterPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersOuterPanel form > div:first-of-type{line-height: 55px; position: relative;}
@@ -801,7 +825,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list acc - filter panel*/
-    #filtersAccPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 100%; height: 100%; overflow-x: auto;}
+    #filtersAccPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersAccPanel.active{
+        right: 0;
+    }
     #filtersAccPanel form > div{max-width: 100%; padding: 0 6%;}
     #filtersAccPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersAccPanel form > div:first-of-type{line-height: 55px; position: relative;}
@@ -940,19 +970,12 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3~p{
-        max-height: 0;
-        transition: all 0.5s;
+    .detailContainer aside > div:last-of-type > ul > li > div{display: none;}
+    .detailContainer aside > div:last-of-type > ul > li > h3.active div{
+        display: block;
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
-        max-height: 1000px;
-        transition: all 3s;
-    }
-    .detailContainer aside > div:last-of-type > ul > li > p{
-        overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;
-        transition: all 3s cubic-bezier(0.34, 0.01, 0.56, 1);
-    }
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p:last-of-type{padding-bottom: 20px}
+    .detailContainer aside > div:last-of-type > ul > li > div > p{font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;}
+    .detailContainer aside > div:last-of-type > ul > li > div:last-of-type{padding-bottom: 15px}
     .detailContainer > div:nth-of-type(2){padding: 45px 0 50px 0;}
     .detailContainer > div h2{
         padding: 0 0 35px 5.73%; font-size: 25px; font-weight: 600; color: #000000;
@@ -1713,6 +1736,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li:not(:last-of-type){
         margin-bottom: 15px;
     }
+    
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4{
         line-height: 16px; padding: 15px 10% 15px 5%; font-size: 13px; font-weight: 600; color: #444444; position: relative; cursor: pointer;
     }
@@ -1724,17 +1748,8 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transform: rotate(90deg);
         transition: all 0.4s ease;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4 + div{
-        max-height: 0;
-    }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{
-        overflow: hidden;
-        transition: all 0.3s ease-out;
-    }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{
-        max-height: 2000px;
-        transition: all 0.6s ease-out;
-    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{display: none;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active div{display: block;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p{
         padding: 0 5%; font-size: 13px; font-weight: 400; color: #626262; line-height: 18px;
     }
@@ -2323,7 +2338,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     .listContainer .topBtn button > span{display: none;}
 
     /* list new in - filter panel*/
-    #filtersNewinPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersNewinPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersNewinPanel.active{
+        right: 0;
+    }
     #filtersNewinPanel form > div{padding: 0 25px;}
     #filtersNewinPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersNewinPanel form > div:first-of-type{line-height: 55px;}
@@ -2412,7 +2433,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list shoes - filter panel*/
-    #filtersShoesPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersShoesPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersShoesPanel.active{
+        right: 0;
+    }
     #filtersShoesPanel form > div{padding: 0 25px;}
     #filtersShoesPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersShoesPanel form > div:first-of-type{line-height: 55px;}
@@ -2499,7 +2526,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list clothing - filter panel*/
-    #filtersClothingPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersClothingPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersClothingPanel.active{
+        right: 0;
+    }
     #filtersClothingPanel form > div{padding: 0 25px;}
     #filtersClothingPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersClothingPanel form > div:first-of-type{line-height: 55px;}
@@ -2582,7 +2615,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list dresses - filter panel*/
-    #filtersDressesPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersDressesPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersDressesPanel.active{
+        right: 0;
+    }
     #filtersDressesPanel form > div{padding: 0 25px;}
     #filtersDressesPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersDressesPanel form > div:first-of-type{line-height: 55px;}
@@ -2665,7 +2704,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list Outer - filter panel*/
-    #filtersOuterPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersOuterPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersOuterPanel.active{
+        right: 0;
+    }
     #filtersOuterPanel form > div{padding: 0 25px;}
     #filtersOuterPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersOuterPanel form > div:first-of-type{line-height: 55px;}
@@ -2748,7 +2793,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list acc - filter panel*/
-    #filtersAccPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersAccPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersAccPanel.active{
+        right: 0;
+    }
     #filtersAccPanel form > div{padding: 0 25px;}
     #filtersAccPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersAccPanel form > div:first-of-type{line-height: 55px;}
@@ -2890,18 +2941,12 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3~p{
-        max-height: 0;
-        transition: all 0.5s;
+    .detailContainer aside > div:last-of-type > ul > li > div{display: none;}
+    .detailContainer aside > div:last-of-type > ul > li > h3.active div{
+        display: block;
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
-        max-height: 1000px;
-        transition: all 3s;
-    }
-    .detailContainer aside > div:last-of-type > ul > li > p{
-        overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c; 
-        transition: all 3s cubic-bezier(0.34, 0.01, 0.56, 1);
-    }
+    .detailContainer aside > div:last-of-type > ul > li > div > p{font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;}
+    .detailContainer aside > div:last-of-type > ul > li > div:last-of-type{padding-bottom: 15px}
     .detailContainer > div:not(:last-of-type){padding: 45px 0 50px 0;}
     .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 25px; font-weight: 600; color: #000000;}
      
@@ -3702,20 +3747,11 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transition: all 0.4s ease;
     }
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active::after{
-        transform: rotate(90deg);
+        transform: rotate(90deg); 
         transition: all 0.4s ease;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4 + div{
-        max-height: 0;
-    }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li div{
-        overflow: hidden;
-        transition: all 0.3s ease-out;
-    }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{
-        max-height: 800px;
-        transition: all 0.6s ease-out;
-    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{display: none;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active div{display: block;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p{
         font-size: 13px; font-weight: 400; color: #626262; line-height: 18px;
     }
@@ -4321,7 +4357,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
     }
 
     /* list new in - filter panel*/
-    #filtersNewinPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersNewinPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersNewinPanel.active{
+        right: 0;
+    }
     #filtersNewinPanel form > div{padding: 0 25px;}
     #filtersNewinPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersNewinPanel form > div:first-of-type{line-height: 55px;}
@@ -4410,7 +4452,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list shoes - filter panel*/
-    #filtersShoesPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersShoesPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersShoesPanel.active{
+        right: 0;
+    }
     #filtersShoesPanel form > div{padding: 0 25px;}
     #filtersShoesPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersShoesPanel form > div:first-of-type{line-height: 55px;}
@@ -4497,7 +4545,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list clothing - filter panel*/
-    #filtersClothingPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersClothingPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersClothingPanel.active{
+        right: 0;
+    }
     #filtersClothingPanel form > div{padding: 0 25px;}
     #filtersClothingPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersClothingPanel form > div:first-of-type{line-height: 55px;}
@@ -4580,7 +4634,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list dresses - filter panel*/
-    #filtersDressesPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersDressesPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersDressesPanel.active{
+        right: 0;
+    }
     #filtersDressesPanel form > div{padding: 0 25px;}
     #filtersDressesPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersDressesPanel form > div:first-of-type{line-height: 55px;}
@@ -4663,7 +4723,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list Outer - filter panel*/
-    #filtersOuterPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersOuterPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersOuterPanel.active{
+        right: 0;
+    }
     #filtersOuterPanel form > div{padding: 0 25px;}
     #filtersOuterPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersOuterPanel form > div:first-of-type{line-height: 55px;}
@@ -4746,7 +4812,13 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
 
     /* list acc - filter panel*/
-    #filtersAccPanel.active{display: block; position: fixed; top: 0; right: 0; z-index: 5; background-color: #fff; width: 375px; height: 100%; overflow-x: auto;}
+    #filtersAccPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #filtersAccPanel.active{
+        right: 0;
+    }
     #filtersAccPanel form > div{padding: 0 25px;}
     #filtersAccPanel form > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
     #filtersAccPanel form > div:first-of-type{line-height: 55px;}
@@ -4889,19 +4961,12 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    
-    .detailContainer aside > div:last-of-type > ul > li > h3~p{
-        max-height: 0;
-        transition: all 0.5s;
+    .detailContainer aside > div:last-of-type > ul > li > div{display: none;}
+    .detailContainer aside > div:last-of-type > ul > li > h3.active div{
+        display: block;
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3.active~p{
-        max-height: 1300px;
-        transition: all 3s;
-    }
-    .detailContainer aside > div:last-of-type > ul > li > p{
-        overflow: hidden; font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c; 
-        transition: all 3s cubic-bezier(0.34, 0.01, 0.56, 1);
-    }
+    .detailContainer aside > div:last-of-type > ul > li > div > p{font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;}
+    .detailContainer aside > div:last-of-type > ul > li > div:last-of-type{padding-bottom: 15px}
     .detailContainer > div:not(:last-of-type){padding: 45px 0 50px 0;}
     .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 28px; font-weight: 600; color: #000000;}
      
@@ -5682,17 +5747,8 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         transform: rotate(90deg);
         transition: all 0.4s ease;
     }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4 + div{
-        max-height: 0;
-    }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{
-        overflow: hidden;
-        transition: all 0.3s ease-out;
-    }
-    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active + div{
-        max-height: 800px;
-        transition: all 0.6s ease-out;
-    }
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div{display: none;}
+    .assistanceContainer > .assistancewrap .mainContents > div > ul > li h4.active div{display: block;}
     .assistanceContainer > .assistancewrap .mainContents > div > ul > li > div p{
         font-size: 13px; font-weight: 400; color: #626262; line-height: 18px;
     }

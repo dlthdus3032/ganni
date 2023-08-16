@@ -1,12 +1,6 @@
-[id$='Panel']{
-    display: none;
-}
-[id$='Panel'].active{
-    display: block;
-}
 
+/* font */
 
-    /* font */
 /* Graphik font */
 header > div nav ul > li b ,
 .mainContainer ul li div h2 ,
@@ -57,6 +51,7 @@ footer > div .newsletter #questionComment.active ,
 .detailContainer aside > div:last-of-type > ul > li > h3  ,
 .detailContainer aside > ul > li > p ,
 .detailContainer aside > div:last-of-type > ul > li > p ,
+.detailContainer aside > div:last-of-type > ul > li > div ,
 .detailContainer aside > ul > li > input[type="button"] , 
 .detailContainer > div .tryProductSlider li div a ,
 .detailContainer > div h2 ,
@@ -73,7 +68,6 @@ footer > div .newsletter #questionComment.active ,
 .asideArea > div a ,
 .mydetailsContainer .accountMain > div > div form fieldset label ,
 .mydetailsContainer .accountMain > div > div h3 ,
-.detailContainer aside > div > ul > li > h3:active p ,
 .mydetailsContainer .accountMain > div > div > form > fieldset:nth-of-type(2) label ,
 .accountMain > div .accountMenu li a ,
 .accountMain > div .accountMenu .active ,
@@ -506,8 +500,13 @@ img{width: 100%;
     header > div h1{width: 115px; left: 3%; z-index: 10;}
     header > div h1 a{display: block; text-indent: -9999px; background: url(../images/logo.png) center / contain no-repeat;}
     header > div h1 a img{width: 100%; vertical-align: middle;}
-    header > div nav{display: none;}
-    header > div nav.active{display: block; position: fixed; top: 0px; width: 100%; height: 100vh; padding-top: 75px; box-sizing: border-box; background-color: #fff; overflow-x: auto;} 
+    header > div nav{
+        position: fixed; top: 0px; right: -100%; width: 100%; height: 100vh; padding-top: 75px; box-sizing: border-box; background-color: #fff; overflow-x: auto;
+        transition: all 0.3s ease;
+    }
+    header > div nav.active{
+        right: 0;
+    } 
     header > div nav ul > li{
         display: block; border-top: 1px solid #aeaeae;
     }
@@ -576,7 +575,13 @@ img{width: 100%;
     }
     
     /* search - panel*/
-    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
+    #searchPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #searchPanel.active{
+        right: 0;
+    }
     #searchPanel > div{max-width: 100%; padding: 0 6%;}
     #searchPanel > div:not(:first-of-type){padding-top: 40px;}
     #searchPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -611,8 +616,12 @@ img{width: 100%;
     
 
     /* sign in - panel*/
+    #signInPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
     #signInPanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;
+        right: 0;
     }
     #signInPanel > div{max-width: 100%; padding: 0 6%;}
     #signInPanel > div:not(:first-of-type){padding: 35px 6% 30px;}
@@ -696,7 +705,13 @@ img{width: 100%;
 
 
     /* shopping - panel*/
-    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
+    #bagPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #bagPanel.active{
+        right: 0;
+    }
     #bagPanel > div{max-width: 100%; padding: 0 6%; margin: 0 auto;}
     #bagPanel > div:not(:first-of-type){padding-top: 40px;}
     #bagPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -714,7 +729,13 @@ img{width: 100%;
     } 
 
     /* shopping add - panel*/
-    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
+    #bagHavePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #bagHavePanel.active{
+        right: 0;
+    }
     #bagHavePanel > div{max-width: 100%; padding: 0 6%;}
     #bagHavePanel > div{border-bottom: 1px solid #e5e5e5;}
     #bagHavePanel > div{line-height: 55px;}
@@ -770,8 +791,12 @@ img{width: 100%;
     #bagHavePanel > form > div p{text-align: center; font-size: 10px; font-weight: 400; color: #707070;}
 
     /* detail guide - panel */
+    #sizeGuidePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
     #sizeGuidePanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto; 
+        right: 0;
     }
     #sizeGuidePanel > div{max-width: 100%; padding: 0 6%;}
     #sizeGuidePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
@@ -812,7 +837,13 @@ img{width: 100%;
 
 
     /* detail checkout - panel */
-    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
+    #addCartPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #addCartPanel.active{
+        right: 0;
+    }
     #addCartPanel > div{max-width: 100%; padding: 0 6%;}
     #addCartPanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #addCartPanel > div:first-of-type{line-height: 55px;}
@@ -839,7 +870,13 @@ img{width: 100%;
 
 
     /* detail store - panel */
-    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 100%; height: 100%; overflow-y: auto;}
+    #findStorePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -100%; width: 100%; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #findStorePanel.active{
+        right: 0;
+    }
     #findStorePanel > div{max-width: 100%; padding: 0 6%;}
     #findStorePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #findStorePanel > div:first-of-type{line-height: 55px;}
@@ -1089,8 +1126,11 @@ img{width: 100%;
     header > div h1{width: 120px; left: 3%; z-index: 10;}
     header > div h1 a{display: block; text-indent: -9999px; background: url(../images/logo.png) center / contain no-repeat;}
     header > div h1 a img{width: 100%; vertical-align: middle;}
-    header > div nav{display: none;}
-    header > div nav.active{display: block; position: fixed; top: 0px; width: 100%; height: 100vh; padding-top: 90px; box-sizing: border-box; background-color: #fff; overflow-x: auto;} 
+    header > div nav{
+        position: fixed; top: 0px; right: -100%; width: 100%; height: 100vh; padding-top: 90px; box-sizing: border-box; background-color: #fff; overflow-x: auto;
+        transition: all 0.3s ease;
+    }
+    header > div nav.active{right: 0;} 
     header > div nav ul > li{
         display: block; border-top: 1px solid #aeaeae;
     }
@@ -1161,7 +1201,13 @@ img{width: 100%;
     }
 
     /* search - panel*/
-    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
+    #searchPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #searchPanel.active{
+        right: 0;
+    }
     #searchPanel > div{padding: 0 25px;}
     #searchPanel > div:not(:first-of-type){padding-top: 40px;}
     #searchPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1195,8 +1241,12 @@ img{width: 100%;
     }
 
     /* sign in - panel*/
+    #signInPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
     #signInPanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;
+        right: 0;
     }
     #signInPanel > div{padding: 0 25px;}
     #signInPanel > div:not(:first-of-type){padding: 35px 25px 30px;}
@@ -1280,7 +1330,13 @@ img{width: 100%;
 
 
     /* shopping - panel*/
-    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
+    #bagPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #bagPanel.active{
+        right: 0;
+    }
     #bagPanel > div{padding: 0 25px;}
     #bagPanel > div:not(:first-of-type){padding-top: 40px;}
     #bagPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1298,7 +1354,13 @@ img{width: 100%;
     } 
 
     /* shopping add - panel*/
-    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-x: auto;}
+    #bagHavePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #bagHavePanel.active{
+        right: 0;
+    }
     #bagHavePanel > div{padding: 0 25px;}
     #bagHavePanel > div{border-bottom: 1px solid #e5e5e5;}
     #bagHavePanel > div{line-height: 55px;}
@@ -1326,7 +1388,7 @@ img{width: 100%;
     }
     #bagHavePanel > form ul li > div > .quantComponent{padding-top: 15px;}
     #bagHavePanel > form ul li > div > .quantComponent > input{
-        border: none; width: 20px; text-indent: -999px;}
+        border: none; width: 20px; text-indent: -999px; cursor: pointer;}
     #bagHavePanel > form ul li > div > .quantComponent > .btnMinus{
         width: 20px; height: 20px;  background: url(../images/panel_minus_icon.png) center / contain no-repeat;
     }
@@ -1355,8 +1417,12 @@ img{width: 100%;
 
 
     /* detail guide - panel */
+    #sizeGuidePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
     #sizeGuidePanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto; 
+        right: 0;
     }
     #sizeGuidePanel > div{padding: 0 25px;}
     #sizeGuidePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
@@ -1397,7 +1463,13 @@ img{width: 100%;
 
 
     /* detail checkout - panel */
-    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
+    #addCartPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #addCartPanel.active{
+        right: 0;
+    }
     #addCartPanel > div{padding: 0 25px;}
     #addCartPanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #addCartPanel > div:first-of-type{line-height: 55px;}
@@ -1424,8 +1496,13 @@ img{width: 100%;
 
 
     /* detail store - panel */
-    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
-
+    #findStorePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #findStorePanel.active{
+        right: 0;
+    }
     #findStorePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5; padding: 0 25px;}
     #findStorePanel > div:first-of-type{line-height: 55px;}
     #findStorePanel > div::after{content: ''; display: block; clear: both;}
@@ -1709,9 +1786,14 @@ img{width: 100%;
     }
     header > div > div > input[value="menuPanel"]{display: none;}
 
-
     /* search - panel*/
-    #searchPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
+    #searchPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -370px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #searchPanel.active{
+        right: 0;
+    }
     #searchPanel > div{padding: 0 25px;}
     #searchPanel > div:not(:first-of-type){padding-top: 40px;}
     #searchPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1751,8 +1833,12 @@ img{width: 100%;
         transition: width 0.25s ease-in-out;
     }
     /* sign in - panel*/
+    #signInPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
     #signInPanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;
+        right: 0;
     }
     #signInPanel > div{padding: 0 25px;}
     #signInPanel > div:not(:first-of-type){padding: 35px 25px 30px;}
@@ -1836,7 +1922,13 @@ img{width: 100%;
 
 
     /* shopping - panel*/
-    #bagPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
+    #bagPanel{
+       background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+       transition: all 0.3s ease;
+    }
+    #bagPanel.active{
+        right: 0;
+    }
     #bagPanel > div{padding: 0 25px;}
     #bagPanel > div:not(:first-of-type){padding-top: 40px;}
     #bagPanel > div:not(:last-of-type){border-bottom: 1px solid #e5e5e5;}
@@ -1854,7 +1946,13 @@ img{width: 100%;
     } 
 
     /* shopping add - panel*/
-    #bagHavePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
+    #bagHavePanel{
+        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #bagHavePanel.active{
+        right: 0;
+    }
     #bagHavePanel > div{padding: 0 25px;}
     #bagHavePanel > div{border-bottom: 1px solid #e5e5e5;}
     #bagHavePanel > div{line-height: 55px;}
@@ -1882,7 +1980,7 @@ img{width: 100%;
     }
     #bagHavePanel > form ul li > div > .quantComponent{padding-top: 15px;}
     #bagHavePanel > form ul li > div > .quantComponent > input{
-        border: none; width: 20px; text-indent: -999px;}
+        border: none; width: 20px; text-indent: -999px; cursor: pointer;}
     #bagHavePanel > form ul li > div > .quantComponent > .btnMinus{
         width: 20px; height: 20px;  background: url(../images/panel_minus_icon.png) center / contain no-repeat;
     }
@@ -1911,8 +2009,12 @@ img{width: 100%;
 
 
     /* detail guide - panel */
+    #sizeGuidePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
     #sizeGuidePanel.active{
-        display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto; 
+       right: 0;
     }
     #sizeGuidePanel > div{padding: 0 25px;}
     #sizeGuidePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
@@ -1953,7 +2055,13 @@ img{width: 100%;
 
 
     /* detail checkout - panel */
-    #addCartPanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
+    #addCartPanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #addCartPanel.active{
+        right: 0;
+    }
     #addCartPanel > div{padding: 0 25px;}
     #addCartPanel > div:first-of-type{border-bottom: 1px solid #e5e5e5;}
     #addCartPanel > div:first-of-type{line-height: 55px;}
@@ -1980,8 +2088,13 @@ img{width: 100%;
 
 
     /* detail store - panel */
-    #findStorePanel.active{display: block; background-color: #fff; position: fixed; z-index: 10; top: 0; right: 0; width: 375px; height: 100%; overflow-y: auto;}
-
+    #findStorePanel{
+        background-color: #fff; position: fixed; z-index: 10; top: 0; right: -375px; width: 375px; height: 100%; overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    #findStorePanel.active{
+        right: 0;
+    }
     #findStorePanel > div:first-of-type{border-bottom: 1px solid #e5e5e5; padding: 0 25px;}
     #findStorePanel > div:first-of-type{line-height: 55px;}
     #findStorePanel > div::after{content: ''; display: block; clear: both;}

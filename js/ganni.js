@@ -23,8 +23,6 @@ $(function(){
     panelControl(".main_slider li fieldset input[type='button']");
     panelControl(".tryProductSlider li fieldset input[type='button']");
     panelControl(".signupcontainer > aside > div input[type='button']");
-    justToggle(".detailContainer aside > div:last-of-type > ul > li > h3");
-    justToggle(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");
     justToggle("#filtersNewinPanel form > div > h3");
     justToggle("#filtersShoesPanel form > div > h3");
     justToggle("#filtersClothingPanel form > div > h3");
@@ -51,13 +49,11 @@ $(function(){
     accountPopup(".trackingContainer .accountMain > div > #trackingModify form input[type='button']","#trackingModify");
     accountPopup(".paymentContainer .accountMain > div > #addPayment form input[type='button']","#addPayment" , ".paymentContainer .accountMain > div > #savePayment > input[type='button']");
     accountPopup(".contactusContainer .mainContents > div > form input[type='button']");
+    quantComponent();
+    accordionSlide(".detailContainer aside > div:last-of-type > ul > li > h3");
+    accordionSlide(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");
 });
 
-function slideToggle(a){
-    $(a).click(function(){
-        $(this).next().slideToggle(500);
-  })
-}
 
 
 function customSlider(slideName,slideSlideWidth,slideMaxSlides,slideMinSlides,slideMoveSlides,slideShrinkItems,slideSlideMargin,slideTouchEnabled){
@@ -85,10 +81,7 @@ function resizeContents(){
                 touchEnabled: false
             }
         );
-    } else if(window.matchMedia("(min-width: 769px)").matches){
-
-    }
-    // todo. 1280보다 커졌을때 / 상황으로 만들기.
+    } 
 }
 
 function headerSlide(){
@@ -115,25 +108,6 @@ function headerSlide(){
     }
 } 
 
-// function slideToggle(){
-//     $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").click(function(){
-//         $(this).next().slideToggle(500);
-//         $(this).toggleClass('special');
-
-//     });
-//     // $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").click(function(){
-//     //     if($(this).hasClass("active")){
-//     //         slideUp(3000);
-//     //     } else{
-//     //         slideUp();
-//     //         $(this).addClass("active").next().slideDown();
-//     //     }
-//     //     function slideUp(){
-//     //         $(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4").removeClass("active").next().slideUp();
-//     //     };
-//     // });
-// }
-
 
 
 function panelControl(btn){
@@ -141,18 +115,18 @@ function panelControl(btn){
     $(btn).click(function(){
         currentPanel = "#" + $(this).attr("data-panel");
         $(currentPanel).addClass("active");
-        
     });
     $(".btnClose").click(function(){
         $(currentPanel).removeClass("active");
-    });
+    }); 
 }
 
 function justToggle(a,b){
     $(a).click(function(){
         $(this).toggleClass("active");
-        if($(this).hasClass("active"))
-        $(b).not(this).removeClass("active");
+        if($(this).hasClass("active")){
+            $(b).not(this).removeClass("active");
+        }
   })
 }
 
@@ -244,7 +218,44 @@ function accountPopup(a,b,c){
     });
 }
 
+function quantComponent(){
+    $("#bagHavePanel > form ul li > div > .quantComponent > .btnMinus").click(function(){        
+        var count = $(this).parent(".quantComponent").children("span").text();
+        var num = Number(count);
 
+        num--;
+        if(num<=0){
+            num=1;
+        }
+        $(this).parent(".quantComponent").children("span").text(num);
+    });
+
+    $("#bagHavePanel > form ul li > div > .quantComponent > .btnPlus").click(function(){
+        var count = $(this).parent(".quantComponent").children("span").text();
+        var num = Number(count);
+
+        num++;
+        if(num>=5){
+            num=5;
+        }
+        $(this).parent(".quantComponent").children("span").text(num);
+    });
+}
+
+function accordionSlide(target){
+    $(target).click(function(){
+        $(this).toggleClass("active")
+        if($(this).hasClass("active")){
+            $(this).next().slideDown(400);
+        }else if($(this).removeClass("active")){
+            $(this).next().slideUp(400);
+        }
+    });
+    
+}
+
+
+ 
 
 
 
