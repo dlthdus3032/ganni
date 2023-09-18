@@ -339,6 +339,7 @@ img{width: 100%;
     padding: 0;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
+    margin: 0 auto;
 }
 .bx-viewport{
     width: 100%;
