@@ -51,7 +51,7 @@ $(function(){
     accountPopup(".contactusContainer .mainContents > div > form input[type='button']");
     quantComponent();
     accordionSlide(".detailContainer aside > div:last-of-type > ul > li > h3");
-    accordionSlide(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");
+    accordionSlide(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");Z
 });
 
 
@@ -97,7 +97,7 @@ function headerSlide(){
             $(this).find('.submenu').stop().slideToggle(300);{}
         });
     }else{
-        $('.menuBtn').click(function(){
+        $('.menuBtn').click(function(){ 
             $(this).toggleClass("active");
             $('header > div > nav').toggleClass("active");
             $('.indexHeader').toggleClass("active");
