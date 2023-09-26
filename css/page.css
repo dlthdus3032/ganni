@@ -4904,77 +4904,78 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
 
     /* detail page */
     .detailContainer{max-width: 100%; padding-top: 90px;}
-    .detailContainer > .imageFull{width: 71%; float: left; margin-right: 5%;}
-    .detailContainer > .imageFull li{float: left; width: 100%;}
-    .detailContainer > .imageFull li img{width: 100%; height: 100%;}
-    .detailContainer > ul{width: 71%; float: left; margin-right: 5%;}
-    .detailContainer > aside{width: 18%; margin-right: 6%; float: right; }
-    .detailContainer > div{clear: both;}
-    .detailContainer > ul::after{content: ''; display: block; clear: both;}
-    .detailContainer > ul li{float: left; width: 50%;}
-    .detailContainer > ul li img{width: 100%; height: 100%;}
-    .detailContainer > aside{padding-top: 30px;}
-    .detailContainer > aside > a{display: block; line-height: 17px;
+    .detailContainer .productContent > .imageFull{width: 71%; float: left; margin-right: 5%;}
+    .detailContainer .productContent > .imageFull li{float: left; width: 100%;}
+    .detailContainer .productContent > .imageFull li img{width: 100%; height: 100%;}
+    .detailContainer .productContent::after{content: ''; display: block; clear: both;}
+    .detailContainer .productContent > ul{width: 71%; float: left; margin-right: 5%;}
+    .detailContainer .productContent > aside{width: 18%; margin-right: 6%; float: right; }
+    .detailContainer .productContent > div{clear: both;}
+    .detailContainer .productContent > ul::after{content: ''; display: block; clear: both;}
+    .detailContainer .productContent > ul li{float: left; width: 50%;}
+    .detailContainer .productContent > ul li img{width: 100%; height: 100%;}
+    .detailContainer .productContent aside{padding-top: 30px; position: sticky; top: 90px;}
+    .detailContainer .productContent aside > a{display: block; line-height: 17px;
         font-size: 13px; font-weight: 600; color: #222222; padding-left: 15px; margin-bottom: 40px;
        background: url(../images/detail_back_icon.png) left center / 13px no-repeat ;
     }
-    .detailContainer aside > h2{font-size: 16px; font-weight: 700; color: #000000; margin-bottom: 10px;}
-    .detailContainer aside > span{display: block; font-size: 16px; font-weight: 500; color: #414141; margin-bottom: 35px;}
-    .detailContainer aside form{padding-bottom: 30px; border-bottom: 1px solid #e5e5e5;}
-    .detailContainer aside form > div{margin-bottom: 35px;}
-    .detailContainer aside form > div > span{display: block; font-size: 0px; margin-bottom: 20px;}
-    .detailContainer aside form > div > span b{font-size: 12px; font-weight: 700; color: #000000; margin-right: 10px;}
-    .detailContainer aside form > div > span mark{font-size: 9px; font-weight: 700; background-color: transparent;}
-    .detailContainer aside form > div:first-of-type  > ul{position: relative;}
-    .detailContainer aside form > div:first-of-type  > ul::after{content: ''; display: block; clear: both;}
-    .detailContainer aside form > div:first-of-type  > ul > li{float: left;width: 20px; height: 20px; text-indent: -9999px; border-radius: 4px;}
-    .detailContainer aside form > div:first-of-type  > ul > li:not(:last-of-type){ margin-right: 10px;}
-    .detailContainer aside form > div:first-of-type  > ul > li:first-of-type::after{
+    .detailContainer .productContent aside > h2{font-size: 16px; font-weight: 700; color: #000000; margin-bottom: 10px;}
+    .detailContainer .productContent aside > span{display: block; font-size: 16px; font-weight: 500; color: #414141; margin-bottom: 35px;}
+    .detailContainer .productContent aside form{padding-bottom: 30px; border-bottom: 1px solid #e5e5e5;}
+    .detailContainer .productContent aside form > div{margin-bottom: 35px;}
+    .detailContainer .productContent aside form > div > span{display: block; font-size: 0px; margin-bottom: 20px;}
+    .detailContainer .productContent aside form > div > span b{font-size: 12px; font-weight: 700; color: #000000; margin-right: 10px;}
+    .detailContainer .productContent aside form > div > span mark{font-size: 9px; font-weight: 700; background-color: transparent;}
+    .detailContainer .productContent aside form > div:first-of-type  > ul{position: relative;}
+    .detailContainer .productContent aside form > div:first-of-type  > ul::after{content: ''; display: block; clear: both;}
+    .detailContainer .productContent aside form > div:first-of-type  > ul > li{float: left;width: 20px; height: 20px; text-indent: -9999px; border-radius: 4px;}
+    .detailContainer .productContent aside form > div:first-of-type  > ul > li:not(:last-of-type){ margin-right: 10px;}
+    .detailContainer .productContent aside form > div:first-of-type  > ul > li:first-of-type::after{
         content: ' '; display: block; width: 20px; height: 3px; position: absolute; background: #2e2e2e; top: 120%;
     }
-    .detailContainer aside form > div::after{content: ''; display: block; clear: both;}
-    .detailContainer aside form > .sizeCheck > h3{float: left; font-size: 12px; font-weight: 700; color: #000000; line-height: 16px; }
-    .detailContainer aside form > .sizeCheck > button{
+    .detailContainer .productContent aside form > div::after{content: ''; display: block; clear: both;}
+    .detailContainer .productContent aside form > .sizeCheck > h3{float: left; font-size: 12px; font-weight: 700; color: #000000; line-height: 16px; }
+    .detailContainer .productContent aside form > .sizeCheck > button{
         float: right; line-height: 16px; padding: 0 0 0 20px; background: url(../images/detail_sizeguide_icon.png) -1px 50% / 16px no-repeat; border: none;
         font-size: 11px; font-weight: 500; color: #414141; text-decoration: underline; cursor: pointer;
     }
-    .detailContainer aside form > .sizeCheck > ul{clear: both; display: flex; justify-content: space-between; text-align: center; padding-top: 30px;}
-    .detailContainer aside form > .sizeCheck > ul li input[type="radio"]{display: none;}
-    .detailContainer aside form > .sizeCheck > ul li label{cursor: pointer; display: block; padding: 0 4px; line-height: 21px; font-size: 11px; font-weight: 700; color: #333333; border-radius: 4px;}
-    .detailContainer aside form > .sizeCheck > ul li input[type="radio"]:checked + label{
+    .detailContainer .productContent aside form > .sizeCheck > ul{clear: both; display: flex; justify-content: space-between; text-align: center; padding-top: 30px;}
+    .detailContainer .productContent aside form > .sizeCheck > ul li input[type="radio"]{display: none;}
+    .detailContainer .productContent aside form > .sizeCheck > ul li label{cursor: pointer; display: block; padding: 0 4px; line-height: 21px; font-size: 11px; font-weight: 700; color: #333333; border-radius: 4px;}
+    .detailContainer .productContent aside form > .sizeCheck > ul li input[type="radio"]:checked + label{
         border-radius: 4px; background-color: #000000; color: #fff;
         transition: all 0.4s ease;
     }
-    .detailContainer aside form > input[type="button"]{width: 100%; line-height: 45px; font-size: 14px; font-weight: 700; }
-    .detailContainer aside > ul{padding: 30px 0 30px 0; border-bottom: 1px solid #e5e5e5; display: flex; flex-wrap: wrap; gap: 30px 13%;}
-    .detailContainer aside > ul > li{width: 43.5%;}
-    .detailContainer aside > ul > li > span{font-size: 22px; margin-bottom: 10px;}
-    .detailContainer aside > ul > li > h3{font-size: 12px; font-weight: 700; color: #333333;}
-    .detailContainer aside > ul > li > p{font-size: 11px; font-weight: 500; color: #707070; line-height: 14px;  margin-top: 10px;}
-    .detailContainer aside > ul > li > input[type="button"]{
+    .detailContainer .productContent aside form > input[type="button"]{width: 100%; line-height: 45px; font-size: 14px; font-weight: 700; }
+    .detailContainer .productContent aside > ul{padding: 30px 0 30px 0; border-bottom: 1px solid #e5e5e5; display: flex; flex-wrap: wrap; gap: 30px 13%;}
+    .detailContainer .productContent aside > ul > li{width: 43.5%;}
+    .detailContainer .productContent aside > ul > li > span{font-size: 22px; margin-bottom: 10px;}
+    .detailContainer .productContent aside > ul > li > h3{font-size: 12px; font-weight: 700; color: #333333;}
+    .detailContainer .productContent aside > ul > li > p{font-size: 11px; font-weight: 500; color: #707070; line-height: 14px;  margin-top: 10px;}
+    .detailContainer .productContent aside > ul > li > input[type="button"]{
         padding: 0; border: none; background-color: transparent; font-size: 11px; font-weight: 500; text-decoration: underline; color: #707070;
         margin-top: 8px; cursor: pointer;
     }
-    .detailContainer aside > div:last-of-type{padding: 30px 0;}
-    .detailContainer aside > div:last-of-type > ul > li > h3{
+    .detailContainer .productContent aside > div:last-of-type{padding: 30px 0;}
+    .detailContainer .productContent aside > div:last-of-type > ul > li > h3{
         position: relative; vertical-align: middle; cursor: pointer; font-size: 12px; font-weight: 700; color: #333333; padding: 15px 0;
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3::after{
+    .detailContainer .productContent aside > div:last-of-type > ul > li > h3::after{
         content: ''; display: inline-block; width: 15px; height: 15px; position: absolute; right: 0; background-image: url(../images/detail_expand_more_icon.png); background-size: 15px;
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > h3.active::after{
+    .detailContainer .productContent aside > div:last-of-type > ul > li > h3.active::after{
         transform: rotate(180deg);
         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
-    .detailContainer aside > div:last-of-type > ul > li > div{display: none;}
-    .detailContainer aside > div:last-of-type > ul > li > h3.active div{
+    .detailContainer .productContent aside > div:last-of-type > ul > li > div{display: none;}
+    .detailContainer .productContent aside > div:last-of-type > ul > li > h3.active div{
         display: block;
     }
-    .detailContainer aside > div:last-of-type > ul > li > div > p{font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;}
-    .detailContainer aside > div:last-of-type > ul > li > div:last-of-type{padding-bottom: 15px}
+    .detailContainer .productContent aside > div:last-of-type > ul > li > div > p{font-size: 11px; line-height: 20px; font-weight: 400; color: #6c6c6c;}
+    .detailContainer .productContent aside > div:last-of-type > ul > li > div:last-of-type{padding-bottom: 15px}
     .detailContainer > div:not(:last-of-type){padding: 45px 0 50px 0;}
-    .detailContainer > div h2{padding: 0 0 35px 5.73%; font-size: 28px; font-weight: 600; color: #000000;}
+    .detailContainer > .tryContent > h2{padding: 0 0 35px 5.73%; font-size: 28px; font-weight: 600; color: #000000;}
      
     /* detail-slider */
     .bx-wrapper .bx-viewport .tryProductSlider li > a{display: block;}
