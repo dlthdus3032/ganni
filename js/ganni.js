@@ -36,7 +36,6 @@ $(function(){
     justToggle("footer > div .assistance h3");
     justToggle("footer > div .aboutGanni h3");
     justToggle("footer > div .sns h3");
-    justToggle("header > div nav ul > li b");
     justToggle(".checkout01Container > div > div > form > div > div span");
     headerSlide();
     modalPopup("input[data-popup=passwordTip]" , "#passwordTip");
@@ -55,7 +54,8 @@ $(function(){
     accountPopup(".contactusContainer .mainContents > div > form input[type='button']");
     quantComponent();
     accordionSlide(".detailContainer aside > div:last-of-type > ul > li > h3");
-    accordionSlide(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");Z
+    accordionSlide(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");
+    accordionSlide("header > div nav ul > li b");
 });
 
 
