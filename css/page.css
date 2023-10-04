@@ -6002,7 +6002,7 @@ label[for='colorMixed']::before{background: linear-gradient(180deg, #ecb3c2 20%,
         width: 70%; float: right; margin-bottom: 175px; padding-right: 1.5%;
     }
     .about01Container .interviewArea div:nth-of-type(2) .bx-wrapper .bx-controls-direction .bx-next{top: 36%;}
-    .about01Container .interviewArea.first div:nth-of-type(2) .bx-wrapper .bx-controls-direction .bx-next{top: 55%;}
+    .about01Container .interviewArea.first div:nth-of-type(2) .bx-wrapper .bx-controls-direction .bx-next{top: 50%;}
     .about01Container .interviewArea div:nth-of-type(2) .qaSlider li{margin-right: 28px;}
     .about01Container .interviewArea div:nth-of-type(2) .qaSlider li img{
         margin-bottom: 25px;
