@@ -515,26 +515,28 @@ img{width: 100%;
         border-bottom: 1px solid #a4a4a4;
     }
     header > div nav ul > li b{
-        display: block; position: relative;  font-size: 16px; color: #000000; padding: 25px 3%; cursor: pointer; 
-        transition: all 0.1s cubic-bezier(0.34, 0.01, 0.56, 1);
+        display: block; position: relative;  font-size: 16px; color: #000000; padding: 25px 3%; cursor: pointer;
     }
     header > div nav ul > li b::after{
         position: absolute; content: ''; content: ''; display: inline-block; width: 10px; height: 10px; position: absolute; top: 42%; right: 3%; background: url(../images/header_menu_plus.png) center / contain no-repeat;
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
     header > div nav ul > li b.active::after{
         background: url(../images/header_menu_remove.png) center / contain no-repeat;
+         transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
     header > div nav ul > li:first-of-type b{color: #79eb72;}
-    header > div nav ul > li b.active+.submenu{
-        display: block; padding: 0 3% 25px;
+    header > div nav ul > li b.active .submenu{
+        display: block;
     }
-    header > div nav ul > li b.active+.submenu li:not(:last-of-type){
+    header > div nav ul > li .submenu ol{margin: 0 0 25px 30px;}
+    header > div nav ul > li .submenu li:not(:last-of-type){
         padding-bottom: 15px;
     }
-    header > div nav ul > li b.active+.submenu li a{
+    header > div nav ul > li .submenu li a{
         display: block; font-size: 12px; font-weight: 500; color: #444444;
     }
-    header > div nav ul > li b.active+.submenu li a:not(:last-of-type){
+    header > div nav ul > li .submenu li a:not(:last-of-type){
         padding-bottom: 15px;
     }
     header > div nav ul > li .submenu{
@@ -1139,29 +1141,31 @@ img{width: 100%;
         border-bottom: 1px solid #a4a4a4;
     }
     header > div nav ul > li b{
-        display: block; position: relative;  font-size: 16px; color: #000000; padding: 25px 3%; cursor: pointer; 
-        transition: all 0.1s cubic-bezier(0.34, 0.01, 0.56, 1);
+        display: block; position: relative;  font-size: 16px; color: #000000; padding: 25px 3%; cursor: pointer;
     }
     header > div nav ul > li b::after{
         position: absolute; content: ''; content: ''; display: inline-block; width: 10px; height: 10px; position: absolute; top: 42%; right: 3%; background: url(../images/header_menu_plus.png) center / contain no-repeat;
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
     header > div nav ul > li b.active::after{
         background: url(../images/header_menu_remove.png) center / contain no-repeat;
+        transition: all 0.3s cubic-bezier(0.34, 0.01, 0.56, 1);
     }
     header > div nav ul > li:first-of-type b{color: #79eb72;}
     header > div nav ul > li .submenu{
         display: none;
     }
-    header > div nav ul > li b.active+.submenu{
-        display: block; padding: 0 3% 25px;
+    header > div nav ul > li b.active .submenu{
+        display: block;
     }
-    header > div nav ul > li b.active+.submenu li:not(:last-of-type){
+    header > div nav ul > li .submenu ol{margin: 0 0 25px 30px;}
+    header > div nav ul > li .submenu li:not(:last-of-type){
         padding-bottom: 15px;
     }
-    header > div nav ul > li b.active+.submenu li a{
+    header > div nav ul > li .submenu li a{
         display: block; font-size: 12px; font-weight: 500; color: #444444;
     }
-    header > div nav ul > li b.active+.submenu li a:not(:last-of-type){
+    header > div nav ul > li .submenu li a:not(:last-of-type){
         padding-bottom: 15px;
     }
     header > div > div{
