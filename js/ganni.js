@@ -5,13 +5,6 @@ $( window ).on('resize',function(){
     }
 })
 
-let wwidth = $( window ).width()
-$( window ).on('resize',function(){
-    if(wwidth !== $(window).width() ){
-        location.reload();
-    }
-})
-
 $(function(){
     customSlider(".main_slider",480,4,1,1,true,0,false);
     customSlider(".tryProductSlider",480,4,1,1,true,0,false);
