@@ -1,9 +1,11 @@
-
+let wwidth = $( window ).width()
+$( window ).on('resize',function(){
+    if(wwidth !== $(window).width() ){
+        location.reload();
+    }
+})
 
 $(function(){
-    $( window ).resize(function() {
-        resizeContents();
-    });
     customSlider(".main_slider",480,4,1,1,true,0,false);
     customSlider(".tryProductSlider",480,4,1,1,true,0,false);
     customSlider(".newinSlider",350,4,2,0,true,0,false);
@@ -32,7 +34,6 @@ $(function(){
     justToggle("footer > div .assistance h3");
     justToggle("footer > div .aboutGanni h3");
     justToggle("footer > div .sns h3");
-    justToggle("header > div nav ul > li b");
     justToggle(".checkout01Container > div > div > form > div > div span");
     headerSlide();
     modalPopup("input[data-popup=passwordTip]" , "#passwordTip");
@@ -51,7 +52,8 @@ $(function(){
     accountPopup(".contactusContainer .mainContents > div > form input[type='button']");
     quantComponent();
     accordionSlide(".detailContainer aside > div:last-of-type > ul > li > h3");
-    accordionSlide(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");Z
+    accordionSlide(".assistanceContainer > .assistancewrap .mainContents > div > ul > li h4");
+    accordionSlide("header > div nav ul > li b");
 });
 
 
@@ -94,10 +96,10 @@ function headerSlide(){
     });
     if(window.matchMedia("(min-width: 1280px)").matches){
         $("header > div nav ul > li").hover(function(){
-            $(this).find('.submenu').stop().slideToggle(300);{}
+            $(this).find('.submenu').stop().slideToggle(300);
         });
     }else{
-        $('.menuBtn').click(function(){ 
+        $('.menuBtn').click(function(){
             $(this).toggleClass("active");
             $('header > div > nav').toggleClass("active");
             $('.indexHeader').toggleClass("active");
@@ -106,8 +108,7 @@ function headerSlide(){
             }
         });
     }
-} 
-
+}
 
 
 function panelControl(btn){
